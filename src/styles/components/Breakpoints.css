@@ -1,0 +1,8 @@
+@media (max-width: 768px) {
+    .warning {font-size: .85em !important;}
+    aside.side-nav {display: none;}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    aside.side-nav {display: none;}
+}

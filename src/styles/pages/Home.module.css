@@ -1,0 +1,32 @@
+.intro {
+    min-height: 60vh;
+    width: min(100%, 600px);
+    animation: fade-in 1s ease-in-out;
+}
+
+.emailText {
+    border-bottom: 1px solid var(--inverted-bg-solid);
+}
+
+.email {
+    transition: all 200ms;
+}
+
+.email:hover {
+    background-color: var(--inverted-bg-solid);
+    color: var(--inverted-text-color);
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+.about, .projects, .experience {
+    padding-top: calc(var(--header-height) * 1.5);
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes fade-in {
+    from {height: 120vh; opacity: 0;}
+    to {height: 60vh; opacity: 1;}
+}
