@@ -29,8 +29,8 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 3fr 2fr;
 }
 
 .gridItem {
@@ -38,6 +38,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--border-color);
+    transition: all 200ms;
+}
+
+.gridItem:hover {
+    transform: scale(1.02);
 }
 
 @keyframes fade-in {

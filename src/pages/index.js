@@ -32,10 +32,11 @@ function About() {
                 about me.
             </p>
             <div className={`${styles.grid} gap-2`}>
-                <div className={`${styles.gridItem}`} style={{gridColumn: `span 2`, gridRow: `span 2`}}>Hello</div>
-                <div className={`${styles.gridItem}`} style={{gridColumn: `span 1`, gridRow: `span 2`}}>Hello</div>
-                <div className={`${styles.gridItem}`} style={{gridColumn: `span 2`, gridRow: `span 1`}}>Hello</div>
-                <div className={`${styles.gridItem}`} style={{gridColumn: `span 1`, gridRow: `span 1`}}>Hello</div>
+                <div className={`${styles.gridItem}`} style={{gridColumn: `span 6`, gridRow: `span 3`}}>Main 1</div>
+                <div className={`${styles.gridItem}`} style={{gridColumn: `span 6`, gridRow: `span 3`}}>Main 2</div>
+                <div className={`${styles.gridItem}`} style={{gridColumn: `span 4`, gridRow: `span 2`}}>Side 1</div>
+                <div className={`${styles.gridItem}`} style={{gridColumn: `span 4`, gridRow: `span 2`}}>Side 2</div>
+                <div className={`${styles.gridItem}`} style={{gridColumn: `span 4`, gridRow: `span 2`}}>Side 3</div>
             </div>
             <p className={`${styles.description} fw-2 fs-xs`}>
                 Damien, Chase, TJ, Chuck, Ready, Dom, Cat, Andrea, Andrew, Tmerc, Brooke, Peter, Ryan, Mary, Annie,
