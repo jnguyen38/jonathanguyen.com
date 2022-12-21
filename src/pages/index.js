@@ -1,7 +1,6 @@
 import styles from "../styles/pages/Home.module.css";
 import Head from "next/head";
 import Socials from "../components/Socials";
-import {useEffect} from "react";
 
 function Intro() {
     return (
@@ -11,10 +10,14 @@ function Intro() {
                 I&#39;m a full stack software developer studying at the
                 University of Notre Dame. I have developed several
                 web app solutions during my time at Notre Dame and have a particular
-                interest in cryptography and information security
-                - specifically pentesting, data encryption, and security response.
+                interest in <span className={"fw-5"}>cryptography and information security</span> -
+                specifically pentesting, data encryption, and security response.
             </p>
-            <Socials/>
+            <p className={`fw-2 fs-sm`}>
+                Currently, I am developing a secure and efficient decentralized
+                alternative to multimedia copyrighting.
+            </p>
+            <Socials size={32} gap={4} margin={2}/>
         </div>
     );
 }
@@ -22,9 +25,22 @@ function Intro() {
 function About() {
     return (
         <div id={`about`} className={`${styles.about} gap-2`}>
-            <h2 className={`fw-6`}>about.</h2>
-            <p className={`fw-2 fs-sm`}>
-                Aside from academics, I love 4 things in life: The Outdoors, playing Guitar,
+            <h2 className={`fw-6 fs-md`}>about.</h2>
+            <p className={`${styles.description} fw-2 fs-sm`}>
+                Aside from academics, I love doing four things in life: being outdoors, playing guitar,
+                photography, and being with close friends. Feel free to explore below to learn more
+                about me.
+            </p>
+            <div className={`${styles.grid} gap-2`}>
+                <div className={`${styles.gridItem}`} style={{gridColumn: `span 2`, gridRow: `span 2`}}>Hello</div>
+                <div className={`${styles.gridItem}`} style={{gridColumn: `span 1`, gridRow: `span 2`}}>Hello</div>
+                <div className={`${styles.gridItem}`} style={{gridColumn: `span 2`, gridRow: `span 1`}}>Hello</div>
+                <div className={`${styles.gridItem}`} style={{gridColumn: `span 1`, gridRow: `span 1`}}>Hello</div>
+            </div>
+            <p className={`${styles.description} fw-2 fs-xs`}>
+                Damien, Chase, TJ, Chuck, Ready, Dom, Cat, Andrea, Andrew, Tmerc, Brooke, Peter, Ryan, Mary, Annie,
+                Tara, Conor, Peter, Mikey, Griff, Dylan, DLM, Keaton, Rory, Ian, Emilio, Soph, Maddie, Chloe, Mary,
+                Anna, Tommy, or Holly: If you&#39;re reading this, you&#39;re the best
             </p>
         </div>
     )
@@ -46,7 +62,7 @@ function Experience() {
     );
 }
 
-export default function index() {
+function index() {
     return (
         <div>
             <Head>
@@ -64,3 +80,5 @@ export default function index() {
         </div>
     )
 }
+
+export default index;

@@ -23,15 +23,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-main {
-  width: 80%;
-  margin: var(--header-height) auto;
-
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
+}
+
+.particles {
+  position: fixed;
+  z-index: -1;
 }
 
 .theme {
@@ -50,7 +49,7 @@ code {
   --reg-text-color: var(--theme-white);
   --icon-filter: invert(100%) sepia(2%) saturate(5756%) hue-rotate(298deg) brightness(103%) contrast(89%);
   --inverted-filter: invert(10%) sepia(34%) saturate(2988%) hue-rotate(194deg) brightness(88%) contrast(96%);
-  background-color: var(--theme-black);
+  background-color: rgba(0, 0, 0, 0);
   color: var(--theme-white);
 }
 
@@ -65,7 +64,7 @@ code {
   --reg-text-color: var(--theme-black);
   --icon-filter: invert(39%) sepia(27%) saturate(540%) hue-rotate(153deg) brightness(96%) contrast(86%);
   --inverted-filter: invert(100%) sepia(2%) saturate(5756%) hue-rotate(298deg) brightness(103%) contrast(89%);
-  background-color: var(--theme-white);
+  background-color: rgba(0, 0, 0, 0);
   color: var(--theme-black);
 }
 

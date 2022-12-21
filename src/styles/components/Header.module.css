@@ -1,10 +1,12 @@
 .header {
     height: var(--header-height);
     border-bottom: 1px solid var(--theme-black);
-    padding-inline: 10%;
-    width: 80%;
+    padding-inline: 12%;
+    width: 76%;
     position: fixed;
     top: 0;
     background-color: var(--reg-bg-transparent);
     backdrop-filter: blur(5px);
+    flex-wrap: wrap;
+    z-index: 100;
 }

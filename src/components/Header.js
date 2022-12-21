@@ -1,8 +1,12 @@
 import styles from "../styles/components/Header.module.css";
 import Link from "next/link";
+import Socials from "./Socials";
 
-export default function Header(props) {
+export default function Header() {
     function scrollTo(element) {
+        if (window.location.pathname !== "/")
+            window.location.replace(`/`);
+
         let elem = document.getElementById(element);
         elem.scrollIntoView({
             block: 'start',
@@ -20,6 +24,7 @@ export default function Header(props) {
                 <p onClick={() => scrollTo(`about`)} className={`clickable`}>about</p>
                 <p onClick={() => scrollTo(`projects`)} className={`clickable`}>projects</p>
                 <p onClick={() => scrollTo(`experience`)} className={`clickable`}>experience</p>
+                <Socials size={20} gap={2} margin={0}/>
             </div>
         </div>
     )

@@ -1,6 +1,8 @@
 import '../styles/root.css'
 import {useEffect, useState} from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
+import CustomParticles from "../components/Particles";
 
 export default function App({ Component, pageProps }) {
     const [theme, setTheme] = useState("light")
@@ -16,10 +18,20 @@ export default function App({ Component, pageProps }) {
         if (localTheme) setTheme(localTheme);
     }, [])
 
+    function handleTheme() {
+        setTheme(currTheme => {
+            if (currTheme === "light") return "dark";
+            return "light";
+        })
+    }
+
     return (
-        <div className={theme === "dark" ? "dark-mode" : "light-mode"}>
+        <div className={theme === "dark" ? "theme dark-mode" : "theme light-mode"}>
             <Header/>
             <Component {...pageProps}/>
+            {/*<button onClick={handleTheme}>Change Theme</button>*/}
+            <Footer/>
+            <CustomParticles theme={theme}/>
         </div>
     )
 }
