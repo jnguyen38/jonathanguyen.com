@@ -141,6 +141,15 @@ function Projects() {
 }
 
 function Experience() {
+    const celularity = ["Collaborated with multiple small teams of employees at the biotech company in order to facilitate Celularity’s data integration process into Palantir’s Foundry platform",
+        "Performed statistical analysis on data from pre-clinical/clinical trials and development processes to identify correlations between cell donor characteristics and stem cell viability in cellular therapies"];
+    const ndIT = ["Collaborated with ND University Relations employees on an IT project where we taught community admins how to operate the Notre Dame web page front-end software (my.ND.edu)"];
+    const ndLD = ["Teach my peers how to properly code in Verilog HDL and operate the Quartus Prime software",
+        "Fully understand combinational and sequential circuits in order to efficiently provide help to students"];
+    const ford = ["Deployed a responsive and interactive quiz page that allows Ford’s customers to differentiate leasing and buying, and connected a backend database to track customer trends, created with jQuery/CSS/HTML",
+        "Developed extensive experience with standard industry skills such as GitHub, mob programming, Agile development, unit testing, and various and deployment strategies",
+        "Partnered with a team of Software Devs, Product Managers, and UX Designers to address real-time customer needs"];
+
     function ExperienceItem(props) {
         return (
             <div className={`d-flex-col-l gap-2 full-width`}>
@@ -151,10 +160,10 @@ function Experience() {
                     </div>
                     <p className={`fw-3 italic`}>{props.date}</p>
                 </div>
-                <div className={`${styles.listContainer} full-width ml-4 pl-4 d-flex-col-l gap-2`}>
+                <div className={`full-width d-flex-col-l gap-2`}>
                     {props.points.map((point, index) => {
                         return (
-                            <p key={index}>{point}</p>
+                            <p key={index} className={`${styles.listContainer} ml-4 pl-4 fw-2 fs-sm`}>{point}</p>
                         )
                     })}
                 </div>
@@ -172,13 +181,13 @@ function Experience() {
             </p>
             <div className={`${styles.exploreDisplay} d-flex-col-l gap-4 my-3`}>
                 <ExperienceItem company={`University of Notre Dame`} title={`Logic Design Teaching Assistant`} date={`Winter 2022 - Present`}
-                                points={[`Point 1`, `Point 2`, `Point 3`]}/>
+                                points={ndLD}/>
                 <ExperienceItem company={`Ford Motor Company`} title={`Software Engineer Intern`} date={`Summer 2022`}
-                                points={[`Point 1`, `Point 2`, `Point 3`]}/>
+                                points={ford}/>
                 <ExperienceItem company={`Celularity Inc`} title={`Data Science Intern`} date={`Summer 2021`}
-                                points={[`Point 1`, `Point 2`, `Point 3`]}/>
+                                points={celularity}/>
                 <ExperienceItem company={`University of Notre Dame`} title={`Information Technology Intern`} date={`Spring 2021`}
-                                points={[`Point 1`, `Point 2`, `Point 3`]}/>
+                                points={ndIT}/>
             </div>
         </div>
     );

@@ -12,6 +12,10 @@
     flex-direction: column;
 }
 
+.about {
+    width: min(900px, 100%);
+}
+
 .description {width: min(100%, 600px);}
 
 .aboutDisplay {
@@ -59,6 +63,7 @@
     border-left: 3px solid var(--inverted-bg-solid);
 }
 
+
 .imgParent {
     position: relative;
     width: 100%;
@@ -88,6 +93,7 @@
 
 .skills {
     min-height: 40vh;
+    width: min(900px, 100%);
 }
 
 .skill {
