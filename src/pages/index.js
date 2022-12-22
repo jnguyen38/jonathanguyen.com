@@ -184,6 +184,32 @@ function Experience() {
     );
 }
 
+function Skills() {
+    const proficient = ["SQL", "ReactJS", "React Native", "HTML", "CSS", "JS"];
+    const experience = [];
+    const exposure = [];
+
+    function SkillsList(props) {
+        return (
+            <div className={`d-flex-row-c f-wrap gap-2`}>
+
+            </div>
+        )
+    }
+
+    return (
+        <div id={`skills`} className={`${styles.skills} gap-2`}>
+            <h2 className={`fw-6 fs-md`}>Skills.</h2>
+            <p className={`${styles.description} fw-2 fs-sm`}>
+                Here is my <span className={`fw-5`}>exhaustive set of skills</span> pertaining to software development.
+            </p>
+            <p className={`fw-2 fs-sm`}>I am in <span className={`fw-5`}>proficient</span> in</p>
+            <p className={`fw-2 fs-sm`}>I have <span className={`fw-5`}>experience</span> with</p>
+            <p className={`fw-2 fs-sm`}>I have been <span className={`fw-5`}>exposed</span> to</p>
+        </div>
+    );
+}
+
 function index(props) {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
@@ -203,6 +229,7 @@ function index(props) {
                 <About/>
                 <Projects/>
                 <Experience/>
+                <Skills/>
             </main>
         </div>
     )
