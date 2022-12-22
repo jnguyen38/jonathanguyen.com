@@ -1,13 +1,20 @@
 import styles from "../styles/pages/Home.module.css";
-import Head from "next/head";
-import Socials from "../components/Socials";
-import Image from "next/image";
 
-import climbingSolo from "../../public/media/images/climbing-solo.webp";
-import mcgFormal from "../../public/media/images/mcg-formal.webp";
-import guitar from "../../public/media/images/guitar.webp";
-import interlaken from "../../public/media/images/interlaken.webp";
-import paraglidingGroup from "../../public/media/images/paragliding-group.webp";
+import Head from "next/head";
+import Image from "next/image";
+import {useEffect} from "react";
+import Socials from "../components/Socials";
+
+import climbingSolo from "../../public/media/images/about/climbing-solo.webp";
+import mcgFormal from "../../public/media/images/about/mcg-formal.webp";
+import guitar from "../../public/media/images/about/guitar.webp";
+import interlaken from "../../public/media/images/about/interlaken.webp";
+import paraglidingGroup from "../../public/media/images/about/paragliding-group.webp";
+import sliceOfLife from "../../public/media/images/projects/sliceoflife.webp";
+import studybuddy from "../../public/media/images/projects/studybuddy.webp";
+import thisWebsite from "../../public/media/images/projects/thiswebsite-4.webp";
+import statifyArtist from "../../public/media/images/projects/statify-artist.webp";
+import statifySong from "../../public/media/images/projects/statify-song.webp";
 
 function Intro(props) {
     return (
@@ -41,10 +48,10 @@ function About() {
         }
 
         return (
-            <div className={`${styles.aboutItem} ${props.size} d-flex-row-c clickable`}
+            <div className={`${styles.displayItem} ${styles.aboutAR} ${props.size} d-flex-row-c clickable`}
                  onMouseOver={() => showOverlay(props.num)}
                  onMouseOut={() => closeOverlay(props.num)}>
-                <div className={`${styles.imgContainer}`}><div className={`${styles.imgParent}`}>
+                <div className={`${styles.imgContainer}`}><div className={`${styles.imgParent} ${styles.aboutAR}`}>
                     <Image src={props.src} className={`${styles.img}`} placeholder={`blur`} style={{objectFit: "cover"}}
                            alt={''} fill sizes={"(max-width: 1200px) 25vw, 35vw"}/>
                 </div></div>
@@ -60,7 +67,7 @@ function About() {
 
     return (
         <div id={`about`} className={`${styles.about} gap-2`}>
-            <h2 className={`fw-6 fs-md`}>about.</h2>
+            <h2 className={`fw-6 fs-md`}>About.</h2>
             <p className={`${styles.description} fw-2 fs-sm`}>
                 Aside from academics, I love doing four things in life: rock <span className={`fw-5`}>climbing</span>,
                 playing <span className={`fw-5`}>guitar</span>, <span className={`fw-5`}>photography</span>,
@@ -99,13 +106,13 @@ function Projects() {
         }
 
         return (
-            <div className={`${styles.projectItem} clickable`}
+            <div className={`${styles.displayItem} ${styles.projectAR} clickable`}
                  onMouseOver={() => showOverlay(props.num)}
                  onMouseOut={() => closeOverlay(props.num)}>
-                {/*<div className={`${styles.imgContainer}`}><div className={`${styles.imgParent}`}>*/}
-                {/*    <Image src={props.src} className={`${styles.img}`} placeholder={`blur`} style={{objectFit: "cover"}}*/}
-                {/*           alt={''} fill sizes={"(max-width: 1200px) 25vw, 35vw"}/>*/}
-                {/*</div></div>*/}
+                <div className={`${styles.projectContainer} ${styles.projectAR}`}><div className={`${styles.imgParent} ${styles.projectAR}`}>
+                    <Image src={props.src} className={`${styles.img}`} placeholder={`blur`}
+                           alt={''} fill sizes={"(max-width: 1200px) 25vw, 35vw"}/>
+                </div></div>
                 <div id={`project-${props.num}`} className={`${styles.imgOverlay}`}>
                     <div className={`${styles.overlayText} pl-2`}>
                         <p className={`fw-2`}>{props.type}</p>
@@ -118,7 +125,7 @@ function Projects() {
 
     return (
         <div id={`projects`} className={`${styles.projects} gap-2`}>
-            <h2 className={`fw-6 fs-md`}>projects.</h2>
+            <h2 className={`fw-6 fs-md`}>Projects.</h2>
             <p className={`${styles.description} fw-2 fs-sm`}>
                 Over the course of my time at Notre Dame, I&#39;ve worked on a variety of academic
                 and personal projects. Projects came in all sizes and many languages and made use of
@@ -126,13 +133,13 @@ function Projects() {
                 and learn, here are a few of the <span className={`fw-5`}>projects I&#39;m most proud </span>
                 of over the last year.
             </p>
-            <div className={`${styles.projectDisplay} d-flex f-wrap my-3 gap-2`}>
-                <ProjectItem num={1} type={`Web Development`} desc={`StudyBuddyND`}/>
-                <ProjectItem num={2} type={`Web Development`} desc={`Statify`}/>
-                <ProjectItem num={3} type={`Web Development`} desc={`This Website (Recursive! Wow!)`}/>
-                <ProjectItem num={4} type={`Security`} desc={`Encryption/Hashing CLI`}/>
-                <ProjectItem num={5} type={`Security`} desc={`Cryptographic Fun`}/>
-                <ProjectItem num={6} type={`Web Development`} desc={`Slice of Life`}/>
+            <div className={`${styles.projectDisplay} d-flex f-wrap my-3 d-grid gap-4`}>
+                <ProjectItem num={1} type={`Web Development`} desc={`StudyBuddyND`} src={studybuddy}/>
+                <ProjectItem num={2} type={`Web Development`} desc={`Statify`} src={statifySong}/>
+                <ProjectItem num={3} type={`Web Development`} desc={`This Website (Recursive! Wow!)`} src={thisWebsite}/>
+                <ProjectItem num={4} type={`Web Development`} desc={`Slice of Life`} src={sliceOfLife}/>
+                <ProjectItem num={5} type={`Security`} desc={`Cryptographic Fun`} src={statifyArtist}/>
+                <ProjectItem num={6} type={`Security`} desc={`Encryption/Hashing CLI`} src={statifySong}/>
             </div>
         </div>
     );
@@ -147,6 +154,11 @@ function Experience() {
 }
 
 function index(props) {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div>
             <Head>

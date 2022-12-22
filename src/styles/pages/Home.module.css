@@ -1,5 +1,5 @@
 .intro {
-    min-height: calc(100vh - var(--header-height)*2);
+    min-height: calc(80vh - var(--header-height)*2);
     width: min(100%, 600px);
     animation: fade-in 1s ease-in-out;
 }
@@ -33,10 +33,14 @@
     grid-template-rows: 3fr 2fr;
 }
 
-.aboutItem {
+.projectDisplay {
+    grid-template-columns: repeat(2, 1fr);
+    width: min(900px, 100%);
+}
+
+.displayItem {
     background-color: rgba(238, 238, 238, .9);
     box-shadow: 0 0 5px var(--border-color);
-    aspect-ratio: 1/1;
     position: relative;
 }
 
@@ -52,22 +56,36 @@
 
 .imgContainer {
     padding: 20%;
-    width: 100%;
+    width: 60%;
+}
+
+.projectContainer {
+    padding: 15%;
+    width: 70%;
 }
 
 .imgParent {
     position: relative;
     width: 100%;
+    height: auto;
+}
+
+.aboutAR {
     aspect-ratio: 1/1;
+}
+
+.projectAR {
+    aspect-ratio: 16/9;
 }
 
 .imgOverlay {
     display: flex;
     flex-direction: column;
     position: absolute;
-    padding: 10%;
+    top: 0;
+    padding: 30px 10%;
     width: 80%;
-    height: 80%;
+    height: calc(100% - 60px);
     background-color: var(--image-overlay);
     box-shadow: 0 0 5px var(--theme-blue);
     opacity: 0;
@@ -75,28 +93,9 @@
     color: var(--theme-white);
 }
 
-.overlayText {
-    border-left: 1px solid var(--theme-white);
-}
+.overlayText {border-left: 1px solid var(--theme-white);}
+.img {box-shadow: 0 0 10px var(--border-color);}
 
-.img {
-    box-shadow: 0 0 5px #333;
-}
-
-.projectDisplay {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: min(900px, 100%);
-}
-
-.projectItem {
-    aspect-ratio: 1/1;
-    background-color: rgba(238, 238, 238, .9);
-    box-shadow: 0 0 5px var(--border-color);
-    grid-column: span 1;
-    grid-row: span 1;
-    position: relative;
-}
 
 @keyframes fade-in {
     from {height: 120vh; opacity: 0;}
@@ -107,6 +106,7 @@
 
 @media (max-width: 768px) {
     .aboutDisplay, .projectDisplay {grid-template-columns: 1fr;}
-    .imgContainer {padding: 15%;}
+    .imgContainer {padding: 15%; width: 70%;}
+    .projectContainer {padding: 12%; width: 76%;}
     .main, .side {grid-column: span 1;}
 }
