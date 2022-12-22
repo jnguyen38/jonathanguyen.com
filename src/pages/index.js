@@ -64,7 +64,7 @@ function About() {
             <p className={`${styles.description} fw-2 fs-sm`}>
                 Aside from academics, I love doing four things in life: rock <span className={`fw-5`}>climbing</span>,
                 playing <span className={`fw-5`}>guitar</span>, <span className={`fw-5`}>photography</span>,
-                and being with close <span className={`fw-5`}>friends</span>. I don&#39;t think you will, but feel free to
+                and being with close <span className={`fw-5`}>friends</span>. My writing is a little drawn out, but feel free to
                 learn more about me below.
             </p>
             <div className={`${styles.aboutDisplay} gap-3 my-3`}>
@@ -127,11 +127,12 @@ function Projects() {
                 of over the last year.
             </p>
             <div className={`${styles.projectDisplay} d-flex f-wrap my-3 gap-2`}>
-                <ProjectItem num={1} type={`Full Stack`} desc={`Statify: Redesigned Spotify Statistics App`}/>
-                <ProjectItem num={2} type={`Full Stack`} desc={`Statify: Redesigned Spotify Statistics App`}/>
-                <ProjectItem num={3} type={`Full Stack`} desc={`Statify: Redesigned Spotify Statistics App`}/>
-                <ProjectItem num={4} type={`Full Stack`} desc={`Statify: Redesigned Spotify Statistics App`}/>
-                <ProjectItem num={5} type={`Full Stack`} desc={`Statify: Redesigned Spotify Statistics App`}/>
+                <ProjectItem num={1} type={`Web Development`} desc={`StudyBuddyND`}/>
+                <ProjectItem num={2} type={`Web Development`} desc={`Statify`}/>
+                <ProjectItem num={3} type={`Web Development`} desc={`This Website (Recursive! Wow!)`}/>
+                <ProjectItem num={4} type={`Security`} desc={`Encryption/Hashing CLI`}/>
+                <ProjectItem num={5} type={`Security`} desc={`Cryptographic Fun`}/>
+                <ProjectItem num={6} type={`Web Development`} desc={`Slice of Life`}/>
             </div>
         </div>
     );
