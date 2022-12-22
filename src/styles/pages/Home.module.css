@@ -12,10 +12,6 @@
     flex-direction: column;
 }
 
-.skills {
-    min-height: 40vh;
-}
-
 .description {width: min(100%, 600px);}
 
 .aboutDisplay {
@@ -59,7 +55,7 @@
     width: 70%;
 }
 
-.exploreContainer {
+.listContainer {
     border-left: 3px solid var(--inverted-bg-solid);
 }
 
@@ -90,6 +86,16 @@
 .overlayText {border-left: 1px solid var(--theme-white);}
 .img {box-shadow: 0 0 10px var(--border-color);}
 
+.skills {
+    min-height: 40vh;
+}
+
+.skill {
+    background-color: #eeeeee;
+    color: var(--theme-black);
+    border-radius: var(--border-radius);
+    cursor: default;
+}
 
 @keyframes fade-in {
     from {height: 120vh; opacity: 0;}

@@ -24,6 +24,7 @@ export default function Header(props) {
                 <p onClick={() => scrollTo(`about`)} className={`clickable`}>about</p>
                 <p onClick={() => scrollTo(`projects`)} className={`clickable`}>projects</p>
                 <p onClick={() => scrollTo(`experience`)} className={`clickable`}>experience</p>
+                <p onClick={() => scrollTo(`skills`)} className={`clickable`}>skills</p>
                 <Socials size={20} gap={2} margin={0} theme={props.theme}/>
             </div>
         </div>
