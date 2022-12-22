@@ -19,7 +19,7 @@ import statifySong from "../../public/media/images/projects/statify-song.webp";
 function Intro(props) {
     return (
         <div id={`intro`} className={`${styles.intro} d-flex-col-l gap-2`}>
-            <h1 className={`fw-2 fs-lg mt-5`}>Hi, I&#39;m <span className={`fw-6`}>Jonathan Nguyen</span></h1>
+            <h1 className={`fw-2 fs-xl mt-5`}>Hi, I&#39;m <span className={`fw-6`}>Jonathan Nguyen</span></h1>
             <p className={`fw-2 fs-sm`}>
                 I&#39;m a full stack software developer studying at the
                 University of Notre Dame. I have developed several
@@ -75,16 +75,11 @@ function About() {
                 learn more about me below.
             </p>
             <div className={`${styles.aboutDisplay} gap-3 my-3`}>
-                <AboutItem size={styles.main} num={1} type={`Hobby`} desc={`Rock Climbing`}
-                           src={climbingSolo}/>
-                <AboutItem size={styles.main} num={2} type={`Free Time`} desc={`Friends`}
-                           src={mcgFormal}/>
-                <AboutItem size={styles.side} num={3} type={`Hobby`} desc={`Guitar`}
-                           src={guitar}/>
-                <AboutItem size={styles.side} num={4} type={`Art`} desc={`Photography`}
-                           src={interlaken}/>
-                <AboutItem size={styles.side} num={5} type={`Other`} desc={`Life Updates`}
-                           src={paraglidingGroup}/>
+                <AboutItem size={styles.main} num={1} type={`Hobby`} desc={`Rock Climbing`} src={climbingSolo}/>
+                <AboutItem size={styles.main} num={2} type={`Free Time`} desc={`Friends`} src={mcgFormal}/>
+                <AboutItem size={styles.side} num={3} type={`Hobby`} desc={`Guitar`} src={guitar}/>
+                <AboutItem size={styles.side} num={4} type={`Art`} desc={`Photography`} src={interlaken}/>
+                <AboutItem size={styles.side} num={5} type={`Other`} desc={`Life Updates`} src={paraglidingGroup}/>
             </div>
             <p className={`${styles.description} fw-2 fs-xs`}>
                 Damien, Chase, TJ, Chuck, Ready, Dom, Cat, Andrea, Andrew, Tmerc, Brooke, Peter, Ryan, Mary, Annie,
@@ -147,7 +142,7 @@ function Projects() {
 
 function Experience() {
     return (
-        <div id={`experience`} className={`${styles.experience} gap-2`}>
+        <div id={`Experience`} className={`${styles.experience} gap-2`}>
             <h2 className={`fw-6 fs-md`}>experience.</h2>
         </div>
     );

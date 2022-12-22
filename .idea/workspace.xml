@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c870200e-edfe-41b7-8028-07f89e32107e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/media/images/projects/thiswebsite-2.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/images/projects/thiswebsite-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/images/projects/thiswebsite-4.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/images/christmas.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/about/christmas.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/images/climbing-cleaning.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/about/climbing-cleaning.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/images/climbing-group.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/about/climbing-group.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/images/climbing-solo.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/about/climbing-solo.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/images/guitar.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/about/guitar.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/images/innovatathon.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/about/innovatathon.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/images/interlaken.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/about/interlaken.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/images/london.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/about/london.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/images/mcg-formal.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/about/mcg-formal.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/images/niagara-falls.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/about/niagara-falls.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/images/paragliding-group.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/about/paragliding-group.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/images/paragliding.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/about/paragliding.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/images/photography-bath.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/about/photography-bath.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/images/photography-london.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/about/photography-london.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/images/toga-dance-dates.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/about/toga-dance-dates.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/images/toga-dance-group.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/about/toga-dance-group.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/pages/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/pages/Home.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +47,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671690074199</updated>
-      <workItem from="1671690075815" duration="3735000" />
+      <workItem from="1671690075815" duration="4927000" />
     </task>
     <servers />
   </component>
