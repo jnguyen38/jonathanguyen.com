@@ -49,7 +49,7 @@
     grid-row: span 2;
 }
 
-.imgContainer {
+.aboutContainer {
     padding: 20%;
     width: 60%;
 }
@@ -60,9 +60,12 @@
 }
 
 .listContainer {
-    border-left: 3px solid var(--inverted-bg-solid);
+    border-left: 2px solid var(--inverted-bg-solid);
 }
 
+.exploreLine {
+    border-color: var(--theme-black);
+}
 
 .imgParent {
     position: relative;
@@ -112,7 +115,7 @@
 
 @media (max-width: 768px) {
     .aboutDisplay, .projectDisplay {grid-template-columns: 1fr;}
-    .imgContainer {padding: 15%; width: 70%;}
+    .aboutContainer {padding: 15%; width: 70%;}
     .projectContainer {padding: 12%; width: 76%;}
     .main, .side {grid-column: span 1;}
 }

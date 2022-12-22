@@ -8,5 +8,5 @@
     background-color: var(--reg-bg-transparent);
     backdrop-filter: blur(5px);
     flex-wrap: wrap;
-    z-index: 100;
+    z-index: 10;
 }

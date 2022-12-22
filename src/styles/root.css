@@ -199,11 +199,14 @@ a:link { text-decoration: none; }
   margin: 6px 0;
 }
 
+.inverted-text {color: var(--inverted-text-color);}
 .inverted {background-color: var(--reg-bg-solid);}
 .thick {height: 5px !important;}
 .thin {height: 1px !important;}
 .full-width {width: 100% !important;}
 .white {background-color: var(--theme-white)}
+.black {background-color: var(--theme-black)}
+.black-text {color: var(--theme-black)}
 
 /* Icon Classes */
 

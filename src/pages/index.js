@@ -2,7 +2,7 @@ import styles from "../styles/pages/Home.module.css";
 
 import Head from "next/head";
 import Image from "next/image";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import Socials from "../components/Socials";
 
 import climbingSolo from "../../public/media/images/about/climbing-solo.webp";
@@ -15,6 +15,7 @@ import studybuddy from "../../public/media/images/projects/studybuddy.webp";
 import thisWebsite from "../../public/media/images/projects/thiswebsite-4.webp";
 import statifyArtist from "../../public/media/images/projects/statify-artist.webp";
 import statifySong from "../../public/media/images/projects/statify-song.webp";
+import {ProjectModal} from "../components/Modal";
 
 function Intro(props) {
     return (
@@ -48,10 +49,10 @@ function About() {
         }
 
         return (
-            <div className={`${styles.displayItem} ${styles.aboutAR} ${props.size} d-flex-row-c clickable`}
+            <div className={`${styles.displayItem} ${styles.aboutAR} ${props.size} d-flex-row-c clickable no-select`}
                  onMouseOver={() => showOverlay(props.num)}
                  onMouseOut={() => closeOverlay(props.num)}>
-                <div className={`${styles.imgContainer}`}><div className={`${styles.imgParent} ${styles.aboutAR}`}>
+                <div className={`${styles.aboutContainer}`}><div className={`${styles.imgParent} ${styles.aboutAR}`}>
                     <Image src={props.src} className={`${styles.img}`} placeholder={`blur`} style={{objectFit: "cover"}}
                            alt={''} fill sizes={"(max-width: 1200px) 25vw, 35vw"}/>
                 </div></div>
@@ -91,6 +92,17 @@ function About() {
 }
 
 function Projects() {
+    const [show, setShow] = useState(false);
+    const [data, setData] = useState({});
+
+    function handleShow(num) {
+        setShow(true);
+    }
+
+    function close() {
+        setShow(false);
+    }
+
     function ProjectItem(props) {
         function showOverlay(num) {
             document.getElementById(`project-${num}`).style.opacity = "100%";
@@ -101,7 +113,8 @@ function Projects() {
         }
 
         return (
-            <div className={`${styles.displayItem} ${styles.projectAR} clickable`}
+            <div className={`${styles.displayItem} ${styles.projectAR} clickable no-select`}
+                 onClick={() => handleShow(props.num)}
                  onMouseOver={() => showOverlay(props.num)}
                  onMouseOut={() => closeOverlay(props.num)}>
                 <div className={`${styles.projectContainer} ${styles.projectAR}`}><div className={`${styles.imgParent} ${styles.projectAR}`}>
@@ -136,6 +149,9 @@ function Projects() {
                 <ProjectItem num={5} type={`Security`} desc={`Cryptographic Fun`} src={statifyArtist}/>
                 <ProjectItem num={6} type={`Security`} desc={`Encryption/Hashing CLI`} src={statifySong}/>
             </div>
+
+            <ProjectModal show={show} close={close}/>
+
         </div>
     );
 }
@@ -152,7 +168,7 @@ function Experience() {
 
     function ExperienceItem(props) {
         return (
-            <div className={`d-flex-col-l gap-2 full-width`}>
+            <div className={`${styles.displayItem} black-text d-flex-col-l gap-2 full-width p-3 pr-4`}>
                 <div className={`d-flex jc-sb full-width`}>
                     <div className={`d-flex-col-l`}>
                         <p className={`fw-2`}>{props.company}</p>
@@ -163,7 +179,7 @@ function Experience() {
                 <div className={`full-width d-flex-col-l gap-2`}>
                     {props.points.map((point, index) => {
                         return (
-                            <p key={index} className={`${styles.listContainer} ml-4 pl-4 fw-2 fs-sm`}>{point}</p>
+                            <p key={index} className={`${styles.listContainer} ${styles.exploreLine} ml-4 pl-4 fw-2 fs-sm`}>{point}</p>
                         )
                     })}
                 </div>
@@ -179,15 +195,11 @@ function Experience() {
                 since my first year at Notre Dame. Although I&#39;m always <span className={`fw-5`}>searching for more opportunities</span>,
                 here are a few that I was happy to look back on.
             </p>
-            <div className={`${styles.exploreDisplay} d-flex-col-l gap-4 my-3`}>
-                <ExperienceItem company={`University of Notre Dame`} title={`Logic Design Teaching Assistant`} date={`Winter 2022 - Present`}
-                                points={ndLD}/>
-                <ExperienceItem company={`Ford Motor Company`} title={`Software Engineer Intern`} date={`Summer 2022`}
-                                points={ford}/>
-                <ExperienceItem company={`Celularity Inc`} title={`Data Science Intern`} date={`Summer 2021`}
-                                points={celularity}/>
-                <ExperienceItem company={`University of Notre Dame`} title={`Information Technology Intern`} date={`Spring 2021`}
-                                points={ndIT}/>
+            <div className={`${styles.exploreDisplay} d-flex-col-l gap-3 my-3`}>
+                <ExperienceItem company={`University of Notre Dame`} title={`Logic Design Teaching Assistant`} date={`Winter 2022 - Present`} points={ndLD}/>
+                <ExperienceItem company={`Ford Motor Company`} title={`Software Engineer Intern`} date={`Summer 2022`} points={ford}/>
+                <ExperienceItem company={`Celularity Inc`} title={`Data Science Intern`} date={`Summer 2021`} points={celularity}/>
+                <ExperienceItem company={`University of Notre Dame`} title={`Information Technology Intern`} date={`Spring 2021`} points={ndIT}/>
             </div>
         </div>
     );

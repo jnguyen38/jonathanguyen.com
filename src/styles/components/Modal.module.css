@@ -1,0 +1,59 @@
+@keyframes modalOpacity {
+    0% {background-color: rgba(0,0,0,0)}
+    100% {background-color: rgba(0,0,0,0.7)}
+}
+
+@keyframes slideOut {
+    from {transform: translateX(100%)}
+    to {transform: translateX(0%)}
+}
+
+@keyframes grow {
+    from {width: 10px; height: 10px; padding: 0;}
+    50% {width: min(400px,68%); height: 10px; padding: 0 40px;}
+    to {width: min(400px, 68%); height: 60%; padding: 40px;}
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 100;
+    animation: modalOpacity 200ms ease-in-out;
+}
+
+.modal-main {
+    background-color: var(--reg-bg-solid);
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    right: 0;
+    width: min(400px, 68%);
+    height: 100vh;
+    margin-left: auto;
+    padding: 40px 0 40px 40px;
+    animation: slideOut .25s ease-in-out;
+}
+
+.modal-form {
+    background-color: var(--theme-white);
+    display: flex;
+    flex-flow: column;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: min(400px, 60%);
+    height: 60%;
+    padding: 40px;
+}
+
