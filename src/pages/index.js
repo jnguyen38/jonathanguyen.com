@@ -123,7 +123,7 @@ function Projects() {
             <h2 className={`fw-6 fs-md`}>Projects.</h2>
             <p className={`${styles.description} fw-2 fs-sm`}>
                 Over the course of my time at Notre Dame, I&#39;ve worked on a variety of academic
-                and personal projects. Projects came in all sizes and many languages and made use of
+                and personal projects. Projects came in all sizes, were written a variety of languages, and made use of
                 tons of open source libraries. While I think there&#39;s still a lot more to improve
                 and learn, here are a few of the <span className={`fw-5`}>projects I&#39;m most proud </span>
                 of over the last year.
@@ -141,9 +141,96 @@ function Projects() {
 }
 
 function Experience() {
+    const celularity = ["Collaborated with multiple small teams of employees at the biotech company in order to facilitate Celularity’s data integration process into Palantir’s Foundry platform",
+        "Performed statistical analysis on data from pre-clinical/clinical trials and development processes to identify correlations between cell donor characteristics and stem cell viability in cellular therapies"];
+    const ndIT = ["Collaborated with ND University Relations employees on an IT project where we taught community admins how to operate the Notre Dame web page front-end software (my.ND.edu)"];
+    const ndLD = ["Teach my peers how to properly code in Verilog HDL and operate the Quartus Prime software",
+        "Fully understand combinational and sequential circuits in order to efficiently provide help to students"];
+    const ford = ["Deployed a responsive and interactive quiz page that allows Ford’s customers to differentiate leasing and buying, and connected a backend database to track customer trends, created with jQuery/CSS/HTML",
+        "Developed extensive experience with standard industry skills such as GitHub, mob programming, Agile development, unit testing, and various and deployment strategies",
+        "Partnered with a team of Software Devs, Product Managers, and UX Designers to address real-time customer needs"];
+
+    function ExperienceItem(props) {
+        return (
+            <div className={`d-flex-col-l gap-2 full-width`}>
+                <div className={`d-flex jc-sb full-width`}>
+                    <div className={`d-flex-col-l`}>
+                        <p className={`fw-2`}>{props.company}</p>
+                        <p className={`fw-5 fs-sm`}>{props.title}</p>
+                    </div>
+                    <p className={`fw-3 italic`}>{props.date}</p>
+                </div>
+                <div className={`full-width d-flex-col-l gap-2`}>
+                    {props.points.map((point, index) => {
+                        return (
+                            <p key={index} className={`${styles.listContainer} ml-4 pl-4 fw-2 fs-sm`}>{point}</p>
+                        )
+                    })}
+                </div>
+            </div>
+        )
+    }
+
     return (
-        <div id={`Experience`} className={`${styles.experience} gap-2`}>
-            <h2 className={`fw-6 fs-md`}>experience.</h2>
+        <div id={`experience`} className={`${styles.experience} gap-2`}>
+            <h2 className={`fw-6 fs-md`}>Experience.</h2>
+            <p className={`${styles.description} fw-2 fs-sm`}>
+                So far, I&#39;ve been lucky enough to take part in a wide variety of work experiences
+                since my first year at Notre Dame. Although I&#39;m always <span className={`fw-5`}>searching for more opportunities</span>,
+                here are a few that I was happy to look back on.
+            </p>
+            <div className={`${styles.exploreDisplay} d-flex-col-l gap-4 my-3`}>
+                <ExperienceItem company={`University of Notre Dame`} title={`Logic Design Teaching Assistant`} date={`Winter 2022 - Present`}
+                                points={ndLD}/>
+                <ExperienceItem company={`Ford Motor Company`} title={`Software Engineer Intern`} date={`Summer 2022`}
+                                points={ford}/>
+                <ExperienceItem company={`Celularity Inc`} title={`Data Science Intern`} date={`Summer 2021`}
+                                points={celularity}/>
+                <ExperienceItem company={`University of Notre Dame`} title={`Information Technology Intern`} date={`Spring 2021`}
+                                points={ndIT}/>
+            </div>
+        </div>
+    );
+}
+
+function Skills() {
+    const proficient = ["SQL", "ReactJS", "HTML", "CSS", "JS", "IntelliJ IDEA Ultimate",
+        "C", "C++", "Python", "Verilog", "Node", "ExpressJS", "Linux", "CRA", "NextJS",
+        "GitHub CLI/Web", "Mob Programming", "Agile Dev", "RSA Encryption", "ElGamal Encryption"];
+    const experience = ["Java", "React Native", "Bash Scripting", "Bootstrap", "Excel", "MATLAB",
+        "AWS Lightsail", "Apache Redhat", "Django", "Nginx", "VSCode", "Elliptic Curve Encryption",
+        "CKKS Encryption", "SHE/FHE", "SSL"];
+    const exposure = ["Clojure", "R", "Spring", "Postman", "Docker", "Caddy"];
+    const courses = ["Data Structures", "Logic Design", "Discrete Math", "Computer Architecture", "Systems Programming",
+        "Operating Systems",  "Programming Paradigms", "Database Concepts", "Cryptography"]
+
+    function SkillsList(props) {
+        return (
+            <div className={`${styles.listContainer} d-flex-row-l f-wrap gap-2 ml-4 pl-4`}>
+                {props.skills.map((skill, index) => {
+                    return <div className={`${styles.skill} d-flex-row-c p-1`} key={index}><p className={`fs-xs`}>{skill}</p></div>
+                })}
+            </div>
+        )
+    }
+
+    return (
+        <div id={`skills`} className={`${styles.skills} gap-2`}>
+            <h2 className={`fw-6 fs-md`}>Skills.</h2>
+            <p className={`${styles.description} fw-2 fs-sm`}>
+                Here is my <span className={`fw-5`}>exhaustive set of skills</span> pertaining
+                to software development, including programming languages, libraries,
+                popular frameworks, workplace strategies, popular tools or IDEs, and a list of courses
+                I&#39;ve taken so far.
+            </p>
+            <p className={`fw-2 fs-sm mt-4`}>I am in <span className={`fw-5`}>proficient</span> in</p>
+            <SkillsList skills={proficient}/>
+            <p className={`fw-2 fs-sm`}>I have <span className={`fw-5`}>experience</span> with</p>
+            <SkillsList skills={experience}/>
+            <p className={`fw-2 fs-sm`}>I have been <span className={`fw-5`}>exposed</span> to</p>
+            <SkillsList skills={exposure}/>
+            <p className={`fw-2 fs-sm mt-4`}><span className={`fw-5`}>Courses</span> I have taken</p>
+            <SkillsList skills={courses}/>
         </div>
     );
 }
@@ -167,6 +254,7 @@ function index(props) {
                 <About/>
                 <Projects/>
                 <Experience/>
+                <Skills/>
             </main>
         </div>
     )
