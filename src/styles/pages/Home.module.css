@@ -4,17 +4,6 @@
     animation: fade-in 1s ease-in-out;
 }
 
-.email {
-    transition: all 200ms;
-}
-
-.email:hover {
-    background-color: var(--inverted-bg-solid);
-    color: var(--inverted-text-color);
-    border: none;
-    border-radius: var(--border-radius);
-}
-
 .about, .projects, .experience {
     padding-top: calc(var(--header-height) * 1.5);
     min-height: 60vh;
@@ -23,9 +12,7 @@
     flex-direction: column;
 }
 
-.description {
-    width: min(100%, 600px);
-}
+.description {width: min(100%, 600px);}
 
 .aboutDisplay {
     display: grid;
@@ -36,6 +23,10 @@
 .projectDisplay {
     grid-template-columns: repeat(2, 1fr);
     width: min(900px, 100%);
+}
+
+.exploreDisplay {
+    width: min(600px, 100%);
 }
 
 .displayItem {
@@ -64,19 +55,18 @@
     width: 70%;
 }
 
+.exploreContainer {
+    border-left: 3px solid var(--inverted-bg-solid);
+}
+
 .imgParent {
     position: relative;
     width: 100%;
     height: auto;
 }
 
-.aboutAR {
-    aspect-ratio: 1/1;
-}
-
-.projectAR {
-    aspect-ratio: 16/9;
-}
+.aboutAR {aspect-ratio: 1/1;}
+.projectAR {aspect-ratio: 16/9;}
 
 .imgOverlay {
     display: flex;
