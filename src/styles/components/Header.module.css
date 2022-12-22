@@ -1,6 +1,6 @@
 .header {
     height: var(--header-height);
-    border-bottom: 1px solid var(--theme-black);
+    border-bottom: 1px solid var(--inverted-bg-solid);
     padding-inline: 12%;
     width: 76%;
     position: fixed;

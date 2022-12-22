@@ -2,7 +2,7 @@ import styles from "../styles/components/Header.module.css";
 import Link from "next/link";
 import Socials from "./Socials";
 
-export default function Header() {
+export default function Header(props) {
     function scrollTo(element) {
         if (window.location.pathname !== "/")
             window.location.replace(`/`);
@@ -24,7 +24,7 @@ export default function Header() {
                 <p onClick={() => scrollTo(`about`)} className={`clickable`}>about</p>
                 <p onClick={() => scrollTo(`projects`)} className={`clickable`}>projects</p>
                 <p onClick={() => scrollTo(`experience`)} className={`clickable`}>experience</p>
-                <Socials size={20} gap={2} margin={0}/>
+                <Socials size={20} gap={2} margin={0} theme={props.theme}/>
             </div>
         </div>
     )

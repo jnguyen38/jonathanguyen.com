@@ -7,6 +7,10 @@
         margin: 0 auto;
     }
 
+    .gridItem {
+        padding: 40px;
+    }
+
     .warning {font-size: .85em !important;}
     aside.side-nav {display: none;}
 }

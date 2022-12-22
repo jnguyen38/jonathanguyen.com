@@ -5,31 +5,28 @@ import Footer from "../components/Footer";
 import CustomParticles from "../components/Particles";
 
 export default function App({ Component, pageProps }) {
-    const [theme, setTheme] = useState("light")
-
-    useEffect(() => {
-        window.localStorage.setItem("theme", theme);
-    }, [theme])
+    const [theme, setTheme] = useState(true)
 
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        const localTheme = window.localStorage.getItem("theme");
-        if (localTheme) setTheme(localTheme);
+        const localTheme = JSON.parse(window.localStorage.getItem("theme"));
+        setTheme(localTheme);
     }, [])
 
+    useEffect(() => {
+        window.localStorage.setItem("theme", JSON.stringify(theme));
+    }, [theme])
+
     function handleTheme() {
-        setTheme(currTheme => {
-            if (currTheme === "light") return "dark";
-            return "light";
-        })
+        setTheme(currTheme => !currTheme)
     }
 
     return (
-        <div className={theme === "dark" ? "theme dark-mode" : "theme light-mode"}>
-            <Header/>
-            <Component {...pageProps}/>
-            {/*<button onClick={handleTheme}>Change Theme</button>*/}
+        <div className={theme ? "theme light-mode" : "theme dark-mode"}>
+            <Header theme={theme}/>
+            <Component {...pageProps} theme={theme}/>
+            <button onClick={handleTheme}>Change Theme</button>
             <Footer/>
             <CustomParticles theme={theme}/>
         </div>

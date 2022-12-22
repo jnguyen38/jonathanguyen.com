@@ -6,6 +6,7 @@
   --theme-white: #ffffff;
   --theme-blue: #1c5d99;
   --theme-light-blue: #bbcde5;
+  --image-overlay: rgba(28, 93, 153, .7);
   --border-color: #cbcbcb;
   --warning-bg: #fdefef;
   --warning-text: #fd0001;
@@ -44,8 +45,8 @@ code {
   --inverted-bg-transparent-dark: rgba(242, 239, 233, .7);
   --inverted-text-color: var(--theme-black);
   --reg-bg-solid: var(--theme-black);
-  --reg-bg-transparent: rgba(51, 51, 51, 0.4);
-  --reg-bg-transparent-dark: rgba(51, 51, 51, 0.7);
+  --reg-bg-transparent: rgba(51, 51, 51, 0.6);
+  --reg-bg-transparent-dark: rgba(51, 51, 51, 0.8);
   --reg-text-color: var(--theme-white);
   --icon-filter: invert(100%) sepia(2%) saturate(5756%) hue-rotate(298deg) brightness(103%) contrast(89%);
   --inverted-filter: invert(10%) sepia(34%) saturate(2988%) hue-rotate(194deg) brightness(88%) contrast(96%);
@@ -202,6 +203,7 @@ a:link { text-decoration: none; }
 .thick {height: 5px !important;}
 .thin {height: 1px !important;}
 .full-width {width: 100% !important;}
+.white {background-color: var(--theme-white)}
 
 /* Icon Classes */
 
