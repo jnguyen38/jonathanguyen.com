@@ -1,0 +1,11 @@
+.socials {
+    margin-bottom: -4px;
+}
+
+.social {
+    transition: all 200ms;
+}
+
+.social:hover {
+    transform: scale(1.1);
+}

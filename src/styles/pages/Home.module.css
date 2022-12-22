@@ -1,0 +1,112 @@
+.intro {
+    min-height: calc(100vh - var(--header-height)*2);
+    width: min(100%, 600px);
+    animation: fade-in 1s ease-in-out;
+}
+
+.email {
+    transition: all 200ms;
+}
+
+.email:hover {
+    background-color: var(--inverted-bg-solid);
+    color: var(--inverted-text-color);
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+.about, .projects, .experience {
+    padding-top: calc(var(--header-height) * 1.5);
+    min-height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.description {
+    width: min(100%, 600px);
+}
+
+.aboutDisplay {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 3fr 2fr;
+}
+
+.aboutItem {
+    background-color: rgba(238, 238, 238, .9);
+    box-shadow: 0 0 5px var(--border-color);
+    aspect-ratio: 1/1;
+    position: relative;
+}
+
+.main {
+    grid-column: span 6;
+    grid-row: span 3;
+}
+
+.side {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.imgContainer {
+    padding: 20%;
+    width: 100%;
+}
+
+.imgParent {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.imgOverlay {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: var(--image-overlay);
+    box-shadow: 0 0 5px var(--theme-blue);
+    opacity: 0;
+    transition: all 200ms;
+    color: var(--theme-white);
+}
+
+.overlayText {
+    border-left: 1px solid var(--theme-white);
+}
+
+.img {
+    box-shadow: 0 0 5px #333;
+}
+
+.projectDisplay {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: min(900px, 100%);
+}
+
+.projectItem {
+    aspect-ratio: 1/1;
+    background-color: rgba(238, 238, 238, .9);
+    box-shadow: 0 0 5px var(--border-color);
+    grid-column: span 1;
+    grid-row: span 1;
+    position: relative;
+}
+
+@keyframes fade-in {
+    from {height: 120vh; opacity: 0;}
+    to {height: 60vh; opacity: 1;}
+}
+
+/* Phone Screen */
+
+@media (max-width: 768px) {
+    .aboutDisplay, .projectDisplay {grid-template-columns: 1fr;}
+    .imgContainer {padding: 15%;}
+    .main, .side {grid-column: span 1;}
+}
