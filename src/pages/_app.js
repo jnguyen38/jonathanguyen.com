@@ -5,8 +5,8 @@ import Footer from "../components/Footer";
 import CustomParticles from "../components/Particles";
 
 export default function App({ Component, pageProps }) {
-    const [theme, setTheme] = useState(true)
-    const [particles, setParticles] = useState(true)
+    const [theme, setTheme] = useState(false);
+    const [particles, setParticles] = useState(true);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }) {
     return (
         <div className={theme ? "theme light-mode" : "theme dark-mode"}>
             <Header theme={theme} toggleTheme={toggleTheme} particles={particles} toggleParticles={toggleParticles}/>
-            <Component {...pageProps} theme={theme}/>
+            <Component theme={theme} {...pageProps}/>
             <Footer/>
             {particles ? <CustomParticles theme={theme} particles={particles}/> : <div className={"defaultBG"}/>}
         </div>
