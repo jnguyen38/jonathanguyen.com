@@ -17,7 +17,7 @@ export default function About() {
             size: styles.main, id: 0, type: "Hobby", name: "Rock Climbing", src: climbingSolo,
             content: [{type: "text", value: ""}]
         },
-        {size: styles.main, id: 1, type: "Free Time", name: "Friends", src: mcgFormal},
+        {size: styles.main, id: 1, type: "Free Time", name: "Friends and Family", src: mcgFormal},
         {size: styles.side, id: 2, type: "Hobby", name: "Guitar", src: guitar},
         {size: styles.side, id: 3, type: "Art", name: "Photography", src: interlaken},
         {size: styles.side, id: 4, type: "Other", name: "Life Updates", src: paraglidingGroup},
@@ -60,7 +60,7 @@ export default function About() {
             <p className={`${styles.description} fw-2 fs-sm`}>
                 Aside from academics, I love doing four things in life: rock <span className={`fw-5`}>climbing</span>,
                 playing <span className={`fw-5`}>guitar</span>, <span className={`fw-5`}>photography</span>,
-                and being with close <span className={`fw-5`}>friends</span>. My writing is a little drawn out, but feel free to
+                and being with close <span className={`fw-5`}>friends and family</span>. My writing is a little drawn out, but feel free to
                 learn more about me below.
             </p>
             <div className={`${styles.aboutDisplay} gap-3 my-3`}>

@@ -81,7 +81,7 @@
 
 .close:hover {
     background-color: #e0e0e0;
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .modalContent {
@@ -100,13 +100,13 @@
 }
 
 .modalProject::-webkit-scrollbar-thumb {
-    background: #bbbbbb;
+    background: var(--theme-blue);
     border-radius: 3px;
 
 }
 
 .modalProject::-webkit-scrollbar-thumb:hover {
-    background: #aaaaaa;
+    background: var(--image-overlay);
     width: 10px;
     border-radius: 5px;
 }

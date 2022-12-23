@@ -10,7 +10,7 @@ import {Toggles} from "./Header";
 function ModalTitle(props) {
     return (
         <div className={`d-flex jc-sb full-width gap-2 f-wrap`}>
-            <div className={`${homeStyles.listContainer} ${homeStyles.exploreLine} ml-1 pl-3`}>
+            <div className={`${homeStyles.listContainer} ${homeStyles.exploreLine} ml-2 pl-3`}>
                 <p className={`fw-2`}>{props.data.type}</p>
                 <p className={`fw-5 fs-smd`}>{props.data.name}</p>
             </div>
@@ -21,7 +21,7 @@ function ModalTitle(props) {
 
 function ModalTags(props) {
     return (
-        <div className={`${homeStyles.skillsGap} d-flex-row-l f-wrap gap-1 pl-1`}>
+        <div className={`${homeStyles.skillsGap} d-flex-row-l f-wrap gap-1 pl-1 ml-1`}>
             {props.data.tags && props.data.tags.map((tag, index) =>
                 <div className={`${homeStyles.skill} d-flex-row-c p-1`} key={index}><p className={`fs-xs`}>{tag}</p></div>
             )}
@@ -31,10 +31,12 @@ function ModalTags(props) {
 
 function ModalDesc(props) {
     return (
-        <div className={`d-flex-col-l gap-3 pl-1 mt-3`}>
+        <div className={`d-flex-col-l pl-1 ml-1 mt-3`}>
             {props.data.content && props.data.content.map((item, index) => {
                 if (item.type === "text")
-                    return <p key={index} className={`fw-2 fs-sm`}>{item.value}</p>
+                    return <p key={index} className={`fw-2 fs-eh mb-3`}>{item.value}</p>
+                if (item.type === "section")
+                    return <p key={index} className={`fw-5 fs-smd mb-1`}>{item.value}</p>
             })}
         </div>
     );
@@ -70,7 +72,7 @@ export function InfoModal(props) {
                     <Image src={close} alt={''} width={18} height={18}/>
                 </div>
                 {props.type === "project" ? <ProjectImage data={props.data}/> : <AboutImage data={props.data}/>}
-                <div className={`${styles.modalContent} p-4 d-flex-col-l gap-2 mb-4`}>
+                <div className={`${styles.modalContent} p-4 d-flex-col-l gap-2 mb-3`}>
                     <ModalTitle data={props.data}/>
                     <ModalTags data={props.data}/>
                     <ModalDesc data={props.data}/>
