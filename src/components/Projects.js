@@ -36,7 +36,11 @@ export default function Projects() {
             github: "https://github.com/jnguyen38/jonathanguyen.com",
             website: "https://jonathanguyen.com",
             tags: ["ReactJS", "NextJS", "WebDev", "Node", "TSParticles", "Git"],
-            content: [{type: "text", value: ""}]
+            content: [
+                {type: "text", value: "Everyone who works with me on projects at college knows that I love front-end development, so this website was a lot of fun for me to work on. Everything on this site is custom coded (aside from the 'react-tsparticles' package for the background) in CSS and JSX using the Next.js framework. This project was my first time working with Next, and compared to the production deployment of CRA, the server-side rendering speed is ridiculously faster when loading images and JS effects."},
+                {type: "text", value: "Overall, even though this was my first time working with Next, I was really happy with the result. The UI felt great throughout building this site, and the design that I created feels the most professional out of all my previous work. What I especially love about this site is that everything on here is fully responsive to any screen size and scalable to any amount of new experiences, projects, or skills that I might want to add."},
+                {type: "text", value: "If you like the design or even if you don't, feel free to reach out to me and let me know what you think! Feedback is important to me, so it would definitely mean a lot."},
+            ]
         },
         {
             id: 3, type: "Web Development", name: "Slice of Life", src: sliceOfLife,
@@ -99,8 +103,10 @@ export default function Projects() {
                 and learn, here are a few of the <span className={`fw-5`}>projects I&#39;m most proud </span>
                 of over the last year.
             </p>
-            <div className={`${styles.projectDisplay} d-flex f-wrap my-3 d-grid gap-4`}>
-                {projectData.map(data => <ProjectItem {...data} key={data.id}/>)}
+            <div className={`${styles.projectDisplay} my-3 d-grid gap-3`}>
+                {projectData.map(data =>
+                    <ProjectItem {...data} key={data.id}/>
+                )}
             </div>
             <InfoModal show={show} close={close} data={data} type={"project"}/>
         </div>
