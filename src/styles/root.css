@@ -29,6 +29,10 @@ code {
   monospace;
 }
 
+tab {
+  margin-left: 2em;
+}
+
 .particles {
   position: fixed;
   z-index: -1;

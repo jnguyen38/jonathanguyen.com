@@ -31,10 +31,11 @@ function ModalTags(props) {
 
 function ModalDesc(props) {
     return (
-        <div className={`d-flex-col-l gap-2 pl-1 mt-4`}>
-            {props.data.content && props.data.content.map((item, index) =>
-                <p key={index} className={`fw-2 fs-sm`}>{item.value}</p>
-            )}
+        <div className={`d-flex-col-l gap-3 pl-1 mt-3`}>
+            {props.data.content && props.data.content.map((item, index) => {
+                if (item.type === "text")
+                    return <p key={index} className={`fw-2 fs-sm`}>{item.value}</p>
+            })}
         </div>
     );
 }
@@ -69,7 +70,7 @@ export function InfoModal(props) {
                     <Image src={close} alt={''} width={18} height={18}/>
                 </div>
                 {props.type === "project" ? <ProjectImage data={props.data}/> : <AboutImage data={props.data}/>}
-                <div className={`${styles.modalContent} p-4 d-flex-col-l gap-2`}>
+                <div className={`${styles.modalContent} p-4 d-flex-col-l gap-2 mb-4`}>
                     <ModalTitle data={props.data}/>
                     <ModalTags data={props.data}/>
                     <ModalDesc data={props.data}/>
