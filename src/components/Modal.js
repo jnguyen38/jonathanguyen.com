@@ -84,8 +84,8 @@ export function SettingsModal(props) {
 
     return (
         <div className={`${styles.modal} d-flex-col-c`} onClick={props.close}>
-            <div className={`${styles.modalMain} d-flex-col-c`} onClick={e => e.stopPropagation()}>
-                <div className={`${headerStyles.modalHeader} d-flex-col-c gap-3 my-5`}>
+            <div className={`${styles.modalMain}`} onClick={e => e.stopPropagation()}>
+                <div className={`${headerStyles.modalHeader} d-flex-col-c gap-3`}>
                     <p onClick={() => props.scrollTo(`about`)} className={`clickable fw-2 fs-md`}>about</p>
                     <p onClick={() => props.scrollTo(`projects`)} className={`clickable fw-2 fs-md`}>projects</p>
                     <p onClick={() => props.scrollTo(`experience`)} className={`clickable fw-2 fs-md`}>experience</p>
