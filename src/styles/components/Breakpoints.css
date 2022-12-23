@@ -13,6 +13,9 @@
 
     .warning {font-size: .85em !important;}
     aside.side-nav {display: none;}
+    .fs-xs {font-size: .6em !important}
+    .fs-sm {font-size: 1.1em !important;}
+    .fs-smd {font-size: 1.4em !important;}
 }
 
 /* Tablet Screen */

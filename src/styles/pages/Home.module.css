@@ -34,8 +34,8 @@
 }
 
 .displayItem {
-    background-color: rgba(238, 238, 238, .9);
-    box-shadow: 0 0 5px var(--border-color);
+    background-color: rgba(244, 244, 244, .9);
+    box-shadow: 0 0 4px var(--border-color);
     position: relative;
 }
 
@@ -73,8 +73,8 @@
     height: auto;
 }
 
-.aboutAR {aspect-ratio: 1/1;}
-.projectAR {aspect-ratio: 16/9;}
+.aboutAR {aspect-ratio: 1/1 !important;}
+.projectAR {aspect-ratio: 16/9 !important;}
 
 .imgOverlay {
     display: flex;
@@ -99,10 +99,14 @@
     width: min(900px, 100%);
 }
 
+.skillsGap {
+    gap: .75em;
+}
+
 .skill {
     background-color: #eeeeee;
     color: var(--theme-black);
-    border-radius: var(--border-radius);
+    box-shadow: 0 0 3px var(--border-color);
     cursor: default;
 }
 

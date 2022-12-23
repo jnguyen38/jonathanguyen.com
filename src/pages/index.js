@@ -1,7 +1,6 @@
 import styles from "../styles/pages/Home.module.css";
 
 import Head from "next/head";
-import {useEffect} from "react";
 import Socials from "../components/Socials";
 import Skills from "../components/Skills";
 import About from "../components/About";
@@ -29,11 +28,6 @@ function Intro(props) {
 }
 
 export default function index(props) {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
-
     return (
         <div>
             <Head>

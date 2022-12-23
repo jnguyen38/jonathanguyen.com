@@ -20,12 +20,15 @@ export default function Header(props) {
             <div>
                 <Link href={`/`} className={`fw-7 fs-sm`}>jonathan nguyen</Link>
             </div>
-            <div className={`d-flex gap-3`}>
+            <div className={`${styles.headerLinks} d-flex gap-3`}>
                 <p onClick={() => scrollTo(`about`)} className={`clickable`}>about</p>
                 <p onClick={() => scrollTo(`projects`)} className={`clickable`}>projects</p>
                 <p onClick={() => scrollTo(`experience`)} className={`clickable`}>experience</p>
                 <p onClick={() => scrollTo(`skills`)} className={`clickable`}>skills</p>
                 <Socials size={20} gap={2} margin={0} theme={props.theme}/>
+            </div>
+            <div className={`${styles.menu} d-flex-col-c gap-1`}>
+                <span/><span/><span/>
             </div>
         </div>
     )

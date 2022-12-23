@@ -1,0 +1,56 @@
+import styles from "../styles/pages/Home.module.css";
+import Image from "next/image";
+
+import climbingSolo from "../../public/media/images/about/climbing-solo.webp";
+import mcgFormal from "../../public/media/images/about/mcg-formal.webp";
+import guitar from "../../public/media/images/about/guitar.webp";
+import interlaken from "../../public/media/images/about/interlaken.webp";
+import paraglidingGroup from "../../public/media/images/about/paragliding-group.webp";
+
+export default function About() {
+    function AboutItem(props) {
+        function showOverlay(num) {document.getElementById(`about-${num}`).style.opacity = "100%";}
+        function closeOverlay(num) {document.getElementById(`about-${num}`).style.opacity = "0";}
+
+        return (
+            <div className={`${styles.displayItem} ${styles.aboutAR} ${props.size} d-flex-row-c clickable no-select`}
+                 onMouseOver={() => showOverlay(props.num)} onMouseOut={() => closeOverlay(props.num)}>
+                <div className={`${styles.aboutContainer}`}>
+                    <div className={`${styles.imgParent} ${styles.aboutAR}`}>
+                        <Image src={props.src} className={`${styles.img}`} placeholder={`blur`} style={{objectFit: "cover"}} alt={''} fill sizes={""}/>
+                    </div>
+                </div>
+                <div id={`about-${props.num}`} className={`${styles.imgOverlay}`}>
+                    <div className={`${styles.overlayText} pl-2`}>
+                        <p className={`fw-2`}>{props.type}</p>
+                        <p className={`fw-6 fs-md`}>{props.desc}</p>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+    return (
+        <div id={`about`} className={`${styles.about} gap-2`}>
+            <h2 className={`fw-6 fs-md`}>About.</h2>
+            <p className={`${styles.description} fw-2 fs-sm`}>
+                Aside from academics, I love doing four things in life: rock <span className={`fw-5`}>climbing</span>,
+                playing <span className={`fw-5`}>guitar</span>, <span className={`fw-5`}>photography</span>,
+                and being with close <span className={`fw-5`}>friends</span>. My writing is a little drawn out, but feel free to
+                learn more about me below.
+            </p>
+            <div className={`${styles.aboutDisplay} gap-3 my-3`}>
+                <AboutItem size={styles.main} num={0} type={`Hobby`} desc={`Rock Climbing`} src={climbingSolo}/>
+                <AboutItem size={styles.main} num={1} type={`Free Time`} desc={`Friends`} src={mcgFormal}/>
+                <AboutItem size={styles.side} num={2} type={`Hobby`} desc={`Guitar`} src={guitar}/>
+                <AboutItem size={styles.side} num={3} type={`Art`} desc={`Photography`} src={interlaken}/>
+                <AboutItem size={styles.side} num={4} type={`Other`} desc={`Life Updates`} src={paraglidingGroup}/>
+            </div>
+            <p className={`${styles.description} fw-2 fs-xs`}>
+                Damien, Chase, TJ, Chuck, Ready, Dom, Cat, Andrea, Andrew, Tmerc, Brooke, Peter, Ryan, Mary, Annie,
+                Tara, Conor, Peter, Mikey, Griff, Dylan, DLM, Keaton, Rory, Ian, Emilio, Soph, Maddie, Chloe, Mary,
+                Anna, Tommy, or Holly: If you&#39;re reading this, you&#39;re the best
+            </p>
+        </div>
+    )
+}
