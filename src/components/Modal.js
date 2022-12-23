@@ -42,7 +42,7 @@ function ModalDesc(props) {
 function ProjectImage(props) {
     return (
         <div className={`${styles.projectImage} ${homeStyles.projectAR}`}>
-            <div className={`${styles.imgParent}`}>
+            <div className={`${styles.imgParent} ${homeStyles.projectAR}`}>
                 <Image src={props.data.src} className={`${styles.img}`} placeholder={`blur`} alt={''} fill sizes={"35vw"}/>
             </div>
         </div>
@@ -52,7 +52,7 @@ function ProjectImage(props) {
 function AboutImage(props) {
     return (
         <div className={`${styles.aboutImage} ${homeStyles.aboutAR}`}>
-            <div className={`${styles.imgParent}`}>
+            <div className={`${styles.imgParent} ${homeStyles.aboutAR}`}>
                 <Image src={props.data.src} className={`${styles.img}`} placeholder={`blur`} alt={''} fill sizes={"35vw"}/>
             </div>
         </div>
