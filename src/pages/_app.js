@@ -6,6 +6,7 @@ import CustomParticles from "../components/Particles";
 
 export default function App({ Component, pageProps }) {
     const [theme, setTheme] = useState(true)
+    const [particles, setParticles] = useState(true)
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -18,17 +19,15 @@ export default function App({ Component, pageProps }) {
         window.localStorage.setItem("theme", JSON.stringify(theme));
     }, [theme])
 
-    function handleTheme() {
-        setTheme(currTheme => !currTheme)
-    }
+    function toggleTheme() {setTheme(curr => !curr)}
+    function toggleParticles() {setParticles(curr => !curr)}
 
     return (
         <div className={theme ? "theme light-mode" : "theme dark-mode"}>
-            <Header theme={theme}/>
+            <Header theme={theme} toggleTheme={toggleTheme} particles={particles} toggleParticles={toggleParticles}/>
             <Component {...pageProps} theme={theme}/>
-            <button onClick={handleTheme}>Change Theme</button>
             <Footer/>
-            <CustomParticles theme={theme}/>
+            {particles ? <CustomParticles theme={theme} particles={particles}/> : <div className={"defaultBG"}/>}
         </div>
     )
 }

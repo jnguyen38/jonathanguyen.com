@@ -26,7 +26,7 @@ export default function CustomParticles(props) {
                     color: {value: props.theme ? "#ffffff" : "#333333"},
                     opacity: 1
                 },
-                fpsLimit: 30,
+                fpsLimit: props.particles ? 30 : 0,
                 interactivity: {
                     events: {
                         resize: false,
