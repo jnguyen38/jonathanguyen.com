@@ -54,7 +54,7 @@ export default function Header(props) {
             <div className={`d-flex gap-3`}>
                 <Link href={`/`} className={`fw-7 fs-sm`}>jonathan nguyen</Link>
                 <div className={`${styles.toggleHeader}`}>
-                    <Toggles {...props} size={24}/>
+                    <Toggles {...props} size={20}/>
                 </div>
             </div>
             <div className={`${styles.headerLinks} d-flex gap-3`}>

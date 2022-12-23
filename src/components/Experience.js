@@ -18,7 +18,7 @@ export default function Experience() {
                         <p className={`fw-2`}>{props.company}</p>
                         <p className={`fw-5 fs-smd`}>{props.title}</p>
                     </div>
-                    <p className={`fw-3 italic as-fs text-right`}>{props.date}</p>
+                    <p className={`fw-2 italic as-fs text-right`}>{props.date}</p>
                 </div>
                 <div className={`full-width d-flex-col-l gap-2`}>
                     {props.points.map((point, index) => {

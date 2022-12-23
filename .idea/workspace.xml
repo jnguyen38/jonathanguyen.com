@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c870200e-edfe-41b7-8028-07f89e32107e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/media/icons/blur-off-white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/blur-off.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/blur-on-white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/blur-on.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/light.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Experience.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Experience.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Particles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Particles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/root.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/root.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/Breakpoints.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Breakpoints.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/Modal.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Modal.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
