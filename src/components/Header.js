@@ -1,8 +1,12 @@
 import styles from "../styles/components/Header.module.css";
 import Link from "next/link";
 import Socials from "./Socials";
+import {useState} from "react";
+import {SettingsModal} from "./Modal";
 
 export default function Header(props) {
+    const [menu, setMenu] = useState(false);
+
     function scrollTo(element) {
         if (window.location.pathname !== "/")
             window.location.replace(`/`);
@@ -13,6 +17,12 @@ export default function Header(props) {
             behavior: 'smooth',
             inline: 'center'
         });
+
+        handleMenu()
+    }
+
+    function handleMenu() {
+        setMenu(curr => !curr);
     }
 
     return (
@@ -27,9 +37,10 @@ export default function Header(props) {
                 <p onClick={() => scrollTo(`skills`)} className={`clickable`}>skills</p>
                 <Socials size={20} gap={2} margin={0} theme={props.theme}/>
             </div>
-            <div className={`${styles.menu} d-flex-col-c gap-1`}>
+            <div id={`menu`} className={`${styles.menu} ${menu ? styles.rotated : ""} d-flex-col-c gap-1`} onClick={handleMenu}>
                 <span/><span/><span/>
             </div>
+            <SettingsModal theme={props.theme} show={menu} scrollTo={scrollTo}/>
         </div>
     )
 }

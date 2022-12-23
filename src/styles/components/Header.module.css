@@ -13,7 +13,11 @@
 
 .menu {
     display: none;
-    width: 30px;
+    width: 25px;
+    padding: .5em;
+    transition: all 250ms;
+    border-radius: var(--border-radius);
+    z-index: 150;
 }
 
 .menu span {
@@ -22,17 +26,21 @@
     background-color: var(--inverted-bg-solid);
 }
 
+.rotated {
+    transform: rotate(90deg);
+    background-color: #dddddd;
+}
 
+.modalHeader {
+    height: 100%;
+}
 
 @media (max-width: 772px) {
     .header {
-        padding-inline: 5%;
-        width: 90%;
+        padding-right: 5%;
+        padding-left: 10%;
+        width: 85%;
     }
-    .headerLinks {
-        display: none;
-    }
-    .menu {
-        display: flex;
-    }
+    .headerLinks {display: none;}
+    .menu {display: flex;}
 }

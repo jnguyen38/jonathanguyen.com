@@ -29,15 +29,12 @@
 
 .modalMain {
     background-color: var(--reg-bg-solid);
-    display: flex;
-    flex-flow: column;
     position: absolute;
     right: 0;
-    width: min(400px, 68%);
+    width: min(400px, 75%);
     height: 100vh;
     margin-left: auto;
-    padding: 40px 0 40px 40px;
-    animation: slideOut 200ms ease-in-out;
+    animation: slideOut 300ms ease-in-out;
 }
 
 .modalProject {
