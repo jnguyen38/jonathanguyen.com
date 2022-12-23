@@ -48,7 +48,7 @@
     left: 0;
     right: 0;
     width: min(800px, 90%);
-    height: 85%;
+    height: 75%;
     animation: fadeIn 200ms ease-in-out;
 }
 
