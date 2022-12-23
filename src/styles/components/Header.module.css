@@ -31,16 +31,21 @@
     background-color: #dddddd;
 }
 
+.rotated.menu span {
+    background-color: var(--theme-black);
+}
+
 .modalHeader {
     height: 100%;
 }
 
-@media (max-width: 772px) {
+@media (max-width: 900px) {
     .header {
         padding-right: 5%;
         padding-left: 10%;
         width: 85%;
     }
     .headerLinks {display: none;}
+    .toggleHeader {display: none;}
     .menu {display: flex;}
 }

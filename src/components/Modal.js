@@ -5,6 +5,7 @@ import homeStyles from "../styles/pages/Home.module.css";
 import Image from "next/image";
 import Socials, {Links} from "./Socials";
 import close from "../../public/media/icons/close.png";
+import {Toggles} from "./Header";
 
 function ModalTitle(props) {
     return (
@@ -90,6 +91,7 @@ export function SettingsModal(props) {
                     <p onClick={() => props.scrollTo(`experience`)} className={`clickable fw-2 fs-md`}>experience</p>
                     <p onClick={() => props.scrollTo(`skills`)} className={`clickable fw-2 fs-md`}>skills</p>
                     <Socials size={32} gap={3} margin={5} theme={props.theme}/>
+                    <Toggles {...props} size={32}/>
                 </div>
             </div>
         </div>
