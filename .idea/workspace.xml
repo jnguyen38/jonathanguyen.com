@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c870200e-edfe-41b7-8028-07f89e32107e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/files/studybuddy-report.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/link.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/report.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Socials.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Socials.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/Breakpoints.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Breakpoints.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Projects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Skills.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/components/Modal.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Modal.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/Socials.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Socials.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/pages/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/pages/Home.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/root.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/root.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671690074199</updated>
-      <workItem from="1671690075815" duration="30755000" />
+      <workItem from="1671690075815" duration="33118000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,7 @@
 import styles from "../styles/pages/Home.module.css";
 import Image from "next/image";
 import {useState} from "react";
-import {ProjectModal} from "./Modal";
+import {InfoModal} from "./Modal";
 
 import studybuddy from "../../public/media/images/projects/studybuddy.webp";
 import statifySong from "../../public/media/images/projects/statify-song.webp";
@@ -19,7 +19,7 @@ export default function Projects() {
             github: "https://github.com/jnguyen38/studybuddy",
             website: "https://studybuddynd.com",
             file: "/files/studybuddy-report.pdf",
-            tags: ["ReactJS", "AWS Lightsail", "MySQL", "CRA", "WebDev", "ExpressJS", "NodeJS"],
+            tags: ["ReactJS", "AWS Lightsail", "MySQL", "CRA", "WebDev", "ExpressJS", "Node", "Nginx", "SSL", "Git"],
             content: [
                 {type: "text", value: "This is StudyBuddy."},
                 {type: "text", value: "The backend logic for StudyBuddy"}
@@ -28,28 +28,32 @@ export default function Projects() {
         {
             id: 1, type: "Web Development", name: "Statify", src: statifySong,
             github: "https://github.com/jnguyen38/statify",
-            tags: ["ReactJS", "Spotify API", "CRA", "WebDev", "ExpressJS", "NodeJS"],
+            tags: ["ReactJS", "Spotify API", "CRA", "WebDev", "ExpressJS", "Node", "Git"],
             content: [{type: "text", value: ""}]
         },
         {
             id: 2, type: "Web Development", name: "This Website (Recursive! Wow!)", src: thisWebsite,
             github: "https://github.com/jnguyen38/jonathanguyen.com",
             website: "https://jonathanguyen.com",
+            tags: ["ReactJS", "NextJS", "WebDev", "Node", "TSParticles", "Git"],
             content: [{type: "text", value: ""}]
         },
         {
             id: 3, type: "Web Development", name: "Slice of Life", src: sliceOfLife,
             github: "https://github.com/jnguyen38/slice-of-life",
+            tags: ["ReactJS", "CRA", "MySQL", "WebDev", "Node", "Git", "AWS Lightsail", "Non-Profit"],
             content: [{type: "text", value: ""}]
         },
         {
             id: 4, type: "Security", name: "Cryptography", src: statifyArtist,
             github: "https://github.com/jnguyen38/cryptography",
+            tags: ["C", "C++", "Git", "CKKS Encryption", "RSA Encryption", "Elliptic Curve Encryption", "Security"],
             content: [{type: "text", value: ""}]
         },
         {
             id: 5, type: "Security", name: "Encryption/Hash CLI", src: statifySong,
             github: "https://github.com/jnguyen38/encryption-environment-cli",
+            tags: ["C", "C++", "Git", "DES", "MD5", "SHA-1", "SHA-256", "Security", "Educational"],
             content: [{type: "text", value: ""}]
         }
     ]
@@ -72,7 +76,7 @@ export default function Projects() {
                  onClick={() => handleShow(props.id)} onMouseOver={() => showOverlay(props.id)} onMouseOut={() => closeOverlay(props.id)}>
                 <div className={`${styles.projectContainer} ${styles.projectAR}`}>
                     <div className={`${styles.imgParent} ${styles.projectAR}`}>
-                        <Image src={props.src} className={`${styles.img}`} placeholder={`blur`} alt={''} fill sizes={""}/>
+                        <Image src={props.src} className={`${styles.img}`} placeholder={`blur`} alt={''} fill sizes={"35vw"}/>
                     </div>
                 </div>
                 <div id={`project-${props.id}`} className={`${styles.imgOverlay}`}>
@@ -98,7 +102,7 @@ export default function Projects() {
             <div className={`${styles.projectDisplay} d-flex f-wrap my-3 d-grid gap-4`}>
                 {projectData.map(data => <ProjectItem {...data} key={data.id}/>)}
             </div>
-            <ProjectModal show={show} close={close} data={data}/>
+            <InfoModal show={show} close={close} data={data} type={"project"}/>
         </div>
     );
 }

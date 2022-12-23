@@ -50,16 +50,23 @@
     bottom: 0;
     left: 0;
     right: 0;
-    width: min(700px, 80%);
-    height: 80%;
+    width: min(800px, 90%);
+    height: 85%;
     animation: fadeIn 200ms ease-in-out;
 }
 
-.modalImage {
+.projectImage {
     background-color: #eeeeee;
     position: relative;
-    padding: 15%;
+    padding: 13% 15%;
     width: 70%;
+}
+
+.aboutImage {
+    background-color: #eeeeee;
+    position: relative;
+    padding: 10% 30%;
+    width: 40%;
 }
 
 .imgParent {

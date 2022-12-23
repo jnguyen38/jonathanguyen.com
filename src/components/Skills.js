@@ -2,7 +2,7 @@ import styles from "../styles/pages/Home.module.css";
 
 export default function Skills() {
     const proficient = ["SQL", "ReactJS", "HTML", "CSS", "JS", "IntelliJ IDEA Ultimate",
-        "C", "C++", "Python", "Verilog", "Node", "ExpressJS", "Linux", "CRA", "NextJS",
+        "C", "C++", "Python", "Verilog", "Node", "ExpressJS", "Linux", "CRA", "NextJS", "Vercel",
         "GitHub CLI/Web", "Mob Programming", "Agile Dev", "RSA Encryption", "ElGamal Encryption"];
     const experience = ["Java", "React Native", "Bash Scripting", "Bootstrap", "Excel", "MATLAB",
         "AWS Lightsail", "Apache Redhat", "Django", "Nginx", "VSCode", "Elliptic Curve Encryption",
