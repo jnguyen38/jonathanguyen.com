@@ -1,8 +1,9 @@
 import styles from "../styles/components/Modal.module.css";
+import headerStyles from "../styles/components/Header.module.css";
 import homeStyles from "../styles/pages/Home.module.css";
 
 import Image from "next/image";
-import {Links} from "./Socials";
+import Socials, {Links} from "./Socials";
 import close from "../../public/media/icons/close.png";
 
 function ModalTitle(props) {
@@ -75,4 +76,22 @@ export function InfoModal(props) {
             </div>
         </div>
     );
+}
+
+export function SettingsModal(props) {
+    if (!props.show) return;
+
+    return (
+        <div className={`${styles.modal} d-flex-col-c`} onClick={props.close}>
+            <div className={`${styles.modalMain} d-flex-col-c`} onClick={e => e.stopPropagation()}>
+                <div className={`${headerStyles.modalHeader} d-flex-col-c gap-3 my-5`}>
+                    <p onClick={() => props.scrollTo(`about`)} className={`clickable fw-2 fs-md`}>about</p>
+                    <p onClick={() => props.scrollTo(`projects`)} className={`clickable fw-2 fs-md`}>projects</p>
+                    <p onClick={() => props.scrollTo(`experience`)} className={`clickable fw-2 fs-md`}>experience</p>
+                    <p onClick={() => props.scrollTo(`skills`)} className={`clickable fw-2 fs-md`}>skills</p>
+                    <Socials size={32} gap={3} margin={5} theme={props.theme}/>
+                </div>
+            </div>
+        </div>
+    )
 }
