@@ -22,3 +22,28 @@ export default function Socials(props) {
         </div>
     )
 }
+
+export function Links(props) {
+    return (
+        <div className={`${styles.linkGap} d-flex pl-4 mr-1`}>
+            {props.file &&
+                <Link href={props.file} className={`${styles.social}`}>
+                    <Image src={`/media/icons/report.png`}
+                           width={28} height={28} alt={''}/>
+                </Link>
+            }
+            {props.github &&
+                <Link href={props.github} className={`${styles.social} ${styles.file}`}>
+                    <Image src={`/media/icons/github-mark.svg`}
+                           width={28} height={28} alt={''}/>
+                </Link>
+            }
+            {props.website &&
+                <Link href={props.website} className={`${styles.social}`}>
+                    <Image src={`/media/icons/open.png`}
+                           width={30} height={30} alt={''}/>
+                </Link>
+            }
+        </div>
+    )
+}

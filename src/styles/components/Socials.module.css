@@ -9,3 +9,10 @@
 .social:hover {
     transform: scale(1.1);
 }
+
+.linkGap {
+    gap: .2em 1em;
+}
+
+.file {
+}

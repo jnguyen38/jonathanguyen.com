@@ -34,8 +34,8 @@
 }
 
 .displayItem {
-    background-color: rgba(238, 238, 238, .9);
-    box-shadow: 0 0 5px var(--border-color);
+    background-color: rgba(244, 244, 244, .9);
+    box-shadow: 0 0 4px var(--border-color);
     position: relative;
 }
 
@@ -49,7 +49,7 @@
     grid-row: span 2;
 }
 
-.imgContainer {
+.aboutContainer {
     padding: 20%;
     width: 60%;
 }
@@ -60,9 +60,12 @@
 }
 
 .listContainer {
-    border-left: 3px solid var(--inverted-bg-solid);
+    border-left: 2px solid var(--inverted-bg-solid);
 }
 
+.exploreLine {
+    border-color: var(--theme-black);
+}
 
 .imgParent {
     position: relative;
@@ -70,8 +73,8 @@
     height: auto;
 }
 
-.aboutAR {aspect-ratio: 1/1;}
-.projectAR {aspect-ratio: 16/9;}
+.aboutAR {aspect-ratio: 1/1 !important;}
+.projectAR {aspect-ratio: 16/9 !important;}
 
 .imgOverlay {
     display: flex;
@@ -96,10 +99,14 @@
     width: min(900px, 100%);
 }
 
+.skillsGap {
+    gap: .75em;
+}
+
 .skill {
     background-color: #eeeeee;
     color: var(--theme-black);
-    border-radius: var(--border-radius);
+    box-shadow: 0 0 3px var(--border-color);
     cursor: default;
 }
 
@@ -112,7 +119,7 @@
 
 @media (max-width: 768px) {
     .aboutDisplay, .projectDisplay {grid-template-columns: 1fr;}
-    .imgContainer {padding: 15%; width: 70%;}
+    .aboutContainer {padding: 15%; width: 70%;}
     .projectContainer {padding: 12%; width: 76%;}
     .main, .side {grid-column: span 1;}
 }

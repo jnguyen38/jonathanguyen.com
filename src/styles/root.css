@@ -101,13 +101,14 @@ a:link { text-decoration: none; }
 .fw-9 {font-weight: 900;}
 .fs-xs {font-size: .8em;}
 .fs-sm {font-size: 1.2em;}
+.fs-smd {font-size: 1.5em;}
 .fs-md {font-size: 1.8em;}
 .fs-lg {font-size: 2.2em;}
 .fs-xl {font-size: 2.6em;}
 .text-left {text-align: left;}
 .text-right {text-align: right;}
 .text-center {text-align: center;}
-.underline {text-decoration: underline}
+.underline {text-decoration: underline !important;}
 .italic {font-style: italic}
 
 /* Button Classes */
@@ -199,11 +200,15 @@ a:link { text-decoration: none; }
   margin: 6px 0;
 }
 
+.inverted-text {color: var(--inverted-text-color);}
 .inverted {background-color: var(--reg-bg-solid);}
 .thick {height: 5px !important;}
 .thin {height: 1px !important;}
 .full-width {width: 100% !important;}
 .white {background-color: var(--theme-white)}
+.black {background-color: var(--theme-black)}
+.black-text {color: var(--theme-black)}
+.blue-text {color: var(--theme-blue) !important}
 
 /* Icon Classes */
 

@@ -8,5 +8,31 @@
     background-color: var(--reg-bg-transparent);
     backdrop-filter: blur(5px);
     flex-wrap: wrap;
-    z-index: 100;
+    z-index: 10;
+}
+
+.menu {
+    display: none;
+    width: 30px;
+}
+
+.menu span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--inverted-bg-solid);
+}
+
+
+
+@media (max-width: 772px) {
+    .header {
+        padding-inline: 5%;
+        width: 90%;
+    }
+    .headerLinks {
+        display: none;
+    }
+    .menu {
+        display: flex;
+    }
 }
