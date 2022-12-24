@@ -4,13 +4,16 @@ import homeStyles from "../styles/pages/Home.module.css";
 
 import Image from "next/image";
 import Socials, {Links} from "./Socials";
-import close from "../../public/media/icons/close.png";
 import {Toggles} from "./Header";
+
+import close from "../../public/media/icons/close.png";
+import arrowLeft from "../../public/media/icons/arrow-left.png";
+import arrowRight from "../../public/media/icons/arrow-right.png";
 
 function ModalTitle(props) {
     return (
         <div className={`d-flex jc-sb full-width gap-2 f-wrap`}>
-            <div className={`${homeStyles.listContainer} ${homeStyles.exploreLine} ml-1 pl-3`}>
+            <div className={`${homeStyles.listContainer} ${homeStyles.exploreLine} ml-2 pl-3`}>
                 <p className={`fw-2`}>{props.data.type}</p>
                 <p className={`fw-5 fs-smd`}>{props.data.name}</p>
             </div>
@@ -21,7 +24,7 @@ function ModalTitle(props) {
 
 function ModalTags(props) {
     return (
-        <div className={`${homeStyles.skillsGap} d-flex-row-l f-wrap gap-1 pl-1`}>
+        <div className={`${homeStyles.skillsGap} d-flex-row-l f-wrap gap-1 pl-1 ml-1`}>
             {props.data.tags && props.data.tags.map((tag, index) =>
                 <div className={`${homeStyles.skill} d-flex-row-c p-1`} key={index}><p className={`fs-xs`}>{tag}</p></div>
             )}
@@ -31,10 +34,24 @@ function ModalTags(props) {
 
 function ModalDesc(props) {
     return (
-        <div className={`d-flex-col-l gap-3 pl-1 mt-3`}>
+        <div className={`d-flex-col-l pl-1 ml-1 mt-3`}>
             {props.data.content && props.data.content.map((item, index) => {
                 if (item.type === "text")
-                    return <p key={index} className={`fw-2 fs-sm`}>{item.value}</p>
+                    return <p key={index} className={`fw-2 fs-eh mb-3`}>{item.value}</p>
+                if (item.type === "smalltext")
+                    return <p key={index} className={`fw-2 fs-xs mb-2`}>{item.value}</p>
+                if (item.type === "section")
+                    return <p key={index} className={`fw-5 fs-smd mb-1`}>{item.value}</p>
+                if (item.type === "subsection")
+                    return <p key={index} className={`fw-5 fs-sm mb-1`}>{item.value}</p>
+                if (item.type === "image")
+                    return (
+                        <div className={`${styles.modalImg} ${item.dim} ${item.AR} mb-5`}>
+                            <Image key={index} src={item.value} alt={""} fill sizes={"35vw"}/>
+                        </div>
+                    )
+                if (item.type === "element")
+                    return item.value;
             })}
         </div>
     );
@@ -64,17 +81,23 @@ export function InfoModal(props) {
     if (!props.show) return;
 
     return (
-        <div className={`${styles.modal} d-flex-col-c`} onClick={props.close}>
+        <div className={`${styles.modal} d-flex-row-c`} onClick={props.close}>
+            <div className={`${styles.modalShift} d-flex-col-c no-select`} onClick={e => {e.stopPropagation(); props.shift(-1);}}>
+                <Image src={arrowLeft} alt="" width={28} height={28}/>
+            </div>
             <div className={`${styles.modalProject}`} onClick={e => e.stopPropagation()}>
                 <div className={`${styles.close} d-flex-row-c p-1 m-1 clickable`} onClick={props.close}>
                     <Image src={close} alt={''} width={18} height={18}/>
                 </div>
                 {props.type === "project" ? <ProjectImage data={props.data}/> : <AboutImage data={props.data}/>}
-                <div className={`${styles.modalContent} p-4 d-flex-col-l gap-2 mb-4`}>
+                <div className={`${styles.modalContent} p-4 d-flex-col-l gap-2 mb-3`}>
                     <ModalTitle data={props.data}/>
                     <ModalTags data={props.data}/>
                     <ModalDesc data={props.data}/>
                 </div>
+            </div>
+            <div className={`${styles.modalShift} d-flex-col-c no-select`} onClick={e => {e.stopPropagation(); props.shift(1)}}>
+                <Image src={arrowRight} alt="" width={28} height={28}/>
             </div>
         </div>
     );

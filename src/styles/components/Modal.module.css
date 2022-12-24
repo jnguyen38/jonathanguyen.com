@@ -42,7 +42,6 @@
     flex-flow: column;
     overflow-y: auto;
     position: relative;
-    margin: auto;
     top: auto;
     bottom: 0;
     left: 0;
@@ -81,7 +80,7 @@
 
 .close:hover {
     background-color: #e0e0e0;
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .modalContent {
@@ -100,15 +99,35 @@
 }
 
 .modalProject::-webkit-scrollbar-thumb {
-    background: #bbbbbb;
+    background: var(--theme-blue);
     border-radius: 3px;
 
 }
 
 .modalProject::-webkit-scrollbar-thumb:hover {
-    background: #aaaaaa;
+    background: var(--image-overlay);
     width: 10px;
     border-radius: 5px;
+}
+
+.modalShift {
+    background-color: white;
+    cursor: pointer;
+    margin: 0 20px;
+    opacity: .6;
+    width: 50px;
+    height: 100px;
+    transition: opacity .4s;
+}
+
+.modalShift:hover {
+    opacity: .9;
+}
+
+.modalImg {
+    align-self: center;
+    position: relative;
+    box-shadow: 0 0 5px #888;
 }
 
 @media (max-width: 768px) {
@@ -123,5 +142,8 @@
     .projectImage {
         padding: 13% 45px;
         width: calc(100% - 90px);
+    }
+    .modalShift {
+        display: none;
     }
 }

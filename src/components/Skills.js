@@ -6,7 +6,7 @@ export default function Skills() {
         "GitHub CLI/Web", "Mob Programming", "Agile Dev", "RSA Encryption", "ElGamal Encryption"];
     const experience = ["Java", "React Native", "Bash Scripting", "Bootstrap", "Excel", "MATLAB",
         "AWS Lightsail", "Apache Redhat", "Django", "Nginx", "VSCode", "Elliptic Curve Encryption",
-        "CKKS Encryption", "SHE/FHE", "SSL"];
+        "CKKS Encryption", "SHE/FHE", "SSL", "VirtualBox"];
     const exposure = ["Clojure", "R", "Spring", "Postman", "Docker", "Caddy"];
     const courses = ["Data Structures", "Logic Design", "Discrete Math", "Computer Architecture", "Systems Programming",
         "Operating Systems",  "Programming Paradigms", "Database Concepts", "Cryptography"]

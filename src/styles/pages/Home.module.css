@@ -75,6 +75,8 @@
 
 .aboutAR {aspect-ratio: 1/1 !important;}
 .projectAR {aspect-ratio: 16/9 !important;}
+.midAR {aspect-ratio: 3/2 !important;}
+.profileAR {aspect-ratio: 3/4 !important;}
 
 .imgOverlay {
     display: flex;
@@ -110,6 +112,14 @@
     cursor: default;
 }
 
+.projectDim {
+    width: min(500px, 100%);
+}
+
+.aboutDim {
+    width: min(300px, 100%);
+}
+
 @keyframes fade-in {
     from {height: 120vh; opacity: 0;}
     to {height: 60vh; opacity: 1;}
@@ -119,7 +129,29 @@
 
 @media (max-width: 768px) {
     .aboutDisplay, .projectDisplay {grid-template-columns: 1fr;}
-    .aboutContainer {padding: 15%; width: 70%;}
-    .projectContainer {padding: 12%; width: 76%;}
+    .aboutContainer {padding: 0;width: 100%;}
+    .projectContainer {padding: 0; width: 100%;}
     .main, .side {grid-column: span 1;}
+    .displayItem {box-shadow: none;}
+    .imgOverlay {
+        opacity: 1;
+        display: flex;
+        background-color: #00000088;
+        box-shadow: none;
+        align-items: center;
+        justify-content: center;
+    }
+    .imgOverlay.aboutMobile {
+        bottom: auto;
+        top: auto;
+        height: 50%;
+        width: 50%;
+    }
+    .overlayText {
+        border-left: none;
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--theme-white);
+    }
+    .img {box-shadow: none;}
 }
