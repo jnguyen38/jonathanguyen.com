@@ -42,7 +42,6 @@
     flex-flow: column;
     overflow-y: auto;
     position: relative;
-    margin: auto;
     top: auto;
     bottom: 0;
     left: 0;
@@ -111,6 +110,20 @@
     border-radius: 5px;
 }
 
+.modalShift {
+    background-color: white;
+    cursor: pointer;
+    margin: 0 20px;
+    opacity: .6;
+    width: 50px;
+    height: 100px;
+    transition: opacity .4s;
+}
+
+.modalShift:hover {
+    opacity: .9;
+}
+
 @media (max-width: 768px) {
     .modalProject {
         bottom: 2%;
@@ -123,5 +136,8 @@
     .projectImage {
         padding: 13% 45px;
         width: calc(100% - 90px);
+    }
+    .modalShift {
+        display: none;
     }
 }

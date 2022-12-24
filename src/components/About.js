@@ -12,6 +12,8 @@ import {InfoModal} from "./Modal";
 export default function About() {
     const [show, setShow] = useState(false);
     const [data, setData] = useState({id: -1});
+    const [id, setId] = useState(0);
+
     const aboutData = [
         {
             size: styles.main, id: 0, type: "Hobby", name: "Rock Climbing", src: climbingSolo,
@@ -26,10 +28,18 @@ export default function About() {
     function handleShow(num) {
         setShow(true);
         setData(aboutData[num]);
+        setId(num)
     }
 
     function close() {
         setShow(false);
+    }
+
+    function shift(val) {
+        let index = (id + val) % aboutData.length;
+        if (index < 0) index = aboutData.length + index;
+        setData(aboutData[index]);
+        setId(index);
     }
 
     function AboutItem(props) {
@@ -71,7 +81,7 @@ export default function About() {
                 Tara, Conor, Peter, Mikey, Griff, Dylan, DLM, Keaton, Rory, Ian, Emilio, Soph, Maddie, Chloe, Mary,
                 Anna, Tommy, or Holly: If you&#39;re reading this, you&#39;re the best
             </p>
-            <InfoModal show={show} close={close} type={"about"} data={data}/>
+            <InfoModal show={show} close={close} type={"about"} data={data} shift={shift}/>
         </div>
     )
 }

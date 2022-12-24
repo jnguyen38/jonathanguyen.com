@@ -4,8 +4,11 @@ import homeStyles from "../styles/pages/Home.module.css";
 
 import Image from "next/image";
 import Socials, {Links} from "./Socials";
-import close from "../../public/media/icons/close.png";
 import {Toggles} from "./Header";
+
+import close from "../../public/media/icons/close.png";
+import arrowLeft from "../../public/media/icons/arrow-left.png";
+import arrowRight from "../../public/media/icons/arrow-right.png";
 
 function ModalTitle(props) {
     return (
@@ -37,6 +40,8 @@ function ModalDesc(props) {
                     return <p key={index} className={`fw-2 fs-eh mb-3`}>{item.value}</p>
                 if (item.type === "section")
                     return <p key={index} className={`fw-5 fs-smd mb-1`}>{item.value}</p>
+                if (item.type === "subsection")
+                    return <p key={index} className={`fw-5 fs-sm mb-1`}>{item.value}</p>
             })}
         </div>
     );
@@ -66,7 +71,10 @@ export function InfoModal(props) {
     if (!props.show) return;
 
     return (
-        <div className={`${styles.modal} d-flex-col-c`} onClick={props.close}>
+        <div className={`${styles.modal} d-flex-row-c`} onClick={props.close}>
+            <div className={`${styles.modalShift} d-flex-col-c no-select`} onClick={e => {e.stopPropagation(); props.shift(-1);}}>
+                <Image src={arrowLeft} alt="" width={28} height={28}/>
+            </div>
             <div className={`${styles.modalProject}`} onClick={e => e.stopPropagation()}>
                 <div className={`${styles.close} d-flex-row-c p-1 m-1 clickable`} onClick={props.close}>
                     <Image src={close} alt={''} width={18} height={18}/>
@@ -77,6 +85,9 @@ export function InfoModal(props) {
                     <ModalTags data={props.data}/>
                     <ModalDesc data={props.data}/>
                 </div>
+            </div>
+            <div className={`${styles.modalShift} d-flex-col-c no-select`} onClick={e => {e.stopPropagation(); props.shift(1)}}>
+                <Image src={arrowRight} alt="" width={28} height={28}/>
             </div>
         </div>
     );

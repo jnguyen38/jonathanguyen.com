@@ -1,6 +1,6 @@
 import styles from "../styles/pages/Home.module.css";
 import Image from "next/image";
-import {useState} from "react";
+import {useRef, useState} from "react";
 import {InfoModal} from "./Modal";
 
 import studybuddy from "../../public/media/images/projects/studybuddy.webp";
@@ -8,10 +8,13 @@ import statifySong from "../../public/media/images/projects/statify-song.webp";
 import thisWebsite from "../../public/media/images/projects/thiswebsite-4.webp";
 import sliceOfLife from "../../public/media/images/projects/sliceoflife.webp";
 import statifyArtist from "../../public/media/images/projects/statify-artist.webp";
+import cli from "../../public/media/images/projects/cli.png";
+import crypto from "../../public/media/images/projects/crypto.png";
 
 export default function Projects() {
     const [show, setShow] = useState(false);
     const [data, setData] = useState({id: -1});
+    const [id, setId] = useState(0);
 
     const projectData = [
         {
@@ -72,27 +75,53 @@ export default function Projects() {
             ]
         },
         {
-            id: 4, type: "Security", name: "Cryptography", src: statifyArtist,
+            id: 4, type: "Security", name: "Cryptography", src: crypto,
             github: "https://github.com/jnguyen38/cryptography",
+            file: "/files/encryption.pdf",
             tags: ["C", "C++", "Git", "CKKS Encryption", "RSA Encryption", "Elliptic Curve Encryption", "Security"],
-            content: [{type: "text", value: ""}]
+            content: [
+                {type: "section", value: "Overview"},
+                {type: "text", value: "Over the course of my cryptography class last fall, I was assigned 4 projects each relating to different encryption techniques. The first project involved recreating RSA encryption in C using the GMP arithmetic library. The second project was to recreate ElGamal Encryption in C, again with the GMP library. The goal of the third project was to implement a fully homomorphic CKKS encryption scheme in C using bootstrapping with the HEAAN and GMP libraries. Finally, the fourth project was focused on implementing an Elliptic Curve Encryption scheme with the PBC and GMP libraries. Overall, I really enjoyed working on these projects and they helped to kickstart my interest in information security."},
+                {type: "subsection", value: "Project 1"},
+                {type: "text", value: "So Project 1 focused on implementing RSA Encryption with the GMP library for storing large integers during the encryption process. The primary goal was to show that we could correctly encrypt and decrypt a message with RSA."},
+                {type: "subsection", value: "Project 2"},
+                {type: "text", value: "Project 2 was similar to project 1 in that our only available library was the GMP library. However, this time, we were tasked with encrypting nad decrypting with ElGamal Encryption. While doing so, we also needed to ensure that the encryption was not vulnerable to Quadratic Residue/Quadratic Non Residue attacks."},
+                {type: "subsection", value: "Project 3"},
+                {type: "text", value: "The most challenging of these projects was Project 3. Here we were introduced to HEAAN library for lattice based encryption. Our task was to implement a CKKS Encryption scheme with the library functions provided and use bootstrapping to reduce noise growth and essentially implement a Fully Homomorphic Encryption (FHE) scheme. This project really helped me to grasp a fundamental understanding of bootstrapping and the CKKS encryption scheme."},
+                {type: "subsection", value: "Project 4"},
+                {type: "text", value: "Finally, our 4th project was to implement a simplified version of the BLS signature scheme, using the Pairing Based Cryptography (PBC) library from Stanford."},
+            ]
         },
         {
-            id: 5, type: "Security", name: "Encryption/Hash CLI", src: statifySong,
+            id: 5, type: "Security", name: "House of Hash", src: cli,
             github: "https://github.com/jnguyen38/encryption-environment-cli",
             file: "/files/evolution-of-hashing.pdf",
             tags: ["C", "C++", "Git", "DES", "MD5", "SHA-1", "SHA-256", "Security", "Educational"],
-            content: [{type: "text", value: ""}]
+            content: [
+                {type: "section", value: "Description"},
+                {type: "text", value: "The House of Hash was a fun project that served as my capstone project for my Data Structures class in the fall of 2021. The project is a command line environment that holds a local database of users and hashed passwords. The password can be hashed in popular cryptographic over the last few decades such as MD5 (1991), SHA-1 (1995), SHA-256 (2002), can be encrypted with DES (1975), or can even just be Caesar Shifted. The main goal of this project was that the user would be able to choose one of the hashes or encryptions to both see how they work under the hood and how they have evolved to be more secure over time."},
+                {type: "text", value: "Working on this project really fostered my interest in the information security space, especially in regard to data encryption. After taking my Cryptography class in the fall of 2022, I've really grown to enjoy encryption defense and attack strategies and plan on pursuing it further."},
+                {type: "section", value: "Development"},
+                {type: "text", value: "In regard to development, my team and I coded the entire CLI in C++. We implemented DES, SHA-1, and SHA-256 entirely with the C++ standard library. Such a task really provided us with a deep understanding of encryption and cryptographic hashing functions."}
+            ]
         }
     ]
 
     function handleShow(num) {
         setShow(true);
         setData(projectData[num]);
+        setId(num);
     }
 
     function close() {
         setShow(false);
+    }
+
+    function shift(val) {
+        let index = (id + val) % projectData.length;
+        if (index < 0) index = projectData.length + index;
+        setData(projectData[index]);
+        setId(index);
     }
 
     function ProjectItem(props) {
@@ -128,11 +157,11 @@ export default function Projects() {
                 of over the last year that you can read about.
             </p>
             <div className={`${styles.projectDisplay} my-3 d-grid gap-3`}>
-                {projectData.map(data =>
-                    <ProjectItem {...data} key={data.id}/>
+                {projectData.map(project =>
+                    <ProjectItem {...project} key={project.id}/>
                 )}
             </div>
-            <InfoModal show={show} close={close} data={data} type={"project"}/>
+            <InfoModal show={show} close={close} data={data} type={"project"} shift={shift}/>
         </div>
     );
 }
