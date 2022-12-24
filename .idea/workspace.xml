@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c870200e-edfe-41b7-8028-07f89e32107e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/media/images/about/cows.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/images/about/dome-hyperlapse.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/images/about/outlook.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/images/about/paragliding-solo.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/images/about/photography-bath.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/images/about/photography-london.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/images/about/sisters.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/images/about/suspension.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Projects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/Modal.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Modal.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/pages/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/pages/Home.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Socials.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Socials.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
