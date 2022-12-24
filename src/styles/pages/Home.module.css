@@ -119,17 +119,23 @@
 
 @media (max-width: 768px) {
     .aboutDisplay, .projectDisplay {grid-template-columns: 1fr;}
-    .aboutContainer {padding: 0; width: 100%;}
+    .aboutContainer {padding: 0;width: 100%;}
     .projectContainer {padding: 0; width: 100%;}
     .main, .side {grid-column: span 1;}
     .displayItem {box-shadow: none;}
     .imgOverlay {
         opacity: 1;
         display: flex;
-        background-color: #33333366;
-        box-shadow: 0 0 4px #33333366;
+        background-color: #00000088;
+        box-shadow: none;
         align-items: center;
         justify-content: center;
+    }
+    .imgOverlay.aboutMobile {
+        bottom: auto;
+        top: auto;
+        height: 50%;
+        width: 50%;
     }
     .overlayText {
         border-left: none;

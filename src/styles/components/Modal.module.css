@@ -124,6 +124,11 @@
     opacity: .9;
 }
 
+.modalImg {
+    width: 100%;
+    position: relative;
+}
+
 @media (max-width: 768px) {
     .modalProject {
         bottom: 2%;

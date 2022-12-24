@@ -42,6 +42,12 @@ function ModalDesc(props) {
                     return <p key={index} className={`fw-5 fs-smd mb-1`}>{item.value}</p>
                 if (item.type === "subsection")
                     return <p key={index} className={`fw-5 fs-sm mb-1`}>{item.value}</p>
+                if (item.type === "image")
+                    return (
+                        <div className={`${styles.modalImg} ${item.AR} mb-5`}>
+                            <Image key={index} src={item.value} alt={""} fill/>
+                        </div>
+                    )
             })}
         </div>
     );

@@ -54,7 +54,7 @@ export default function About() {
                         <Image src={props.src} className={`${styles.img}`} placeholder={`blur`} style={{objectFit: "cover"}} alt={''} fill sizes={"35vw"}/>
                     </div>
                 </div>
-                <div id={`about-${props.id}`} className={`${styles.imgOverlay}`}>
+                <div id={`about-${props.id}`} className={`${styles.imgOverlay} ${styles.aboutMobile}`}>
                     <div className={`${styles.overlayText} pl-2`}>
                         <p className={`fw-2`}>{props.type}</p>
                         <p className={`fw-6 fs-md`}>{props.name}</p>
