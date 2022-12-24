@@ -38,16 +38,20 @@ function ModalDesc(props) {
             {props.data.content && props.data.content.map((item, index) => {
                 if (item.type === "text")
                     return <p key={index} className={`fw-2 fs-eh mb-3`}>{item.value}</p>
+                if (item.type === "smalltext")
+                    return <p key={index} className={`fw-2 fs-xs mb-2`}>{item.value}</p>
                 if (item.type === "section")
                     return <p key={index} className={`fw-5 fs-smd mb-1`}>{item.value}</p>
                 if (item.type === "subsection")
                     return <p key={index} className={`fw-5 fs-sm mb-1`}>{item.value}</p>
                 if (item.type === "image")
                     return (
-                        <div className={`${styles.modalImg} ${item.AR} mb-5`}>
-                            <Image key={index} src={item.value} alt={""} fill/>
+                        <div className={`${styles.modalImg} ${item.dim} ${item.AR} mb-5`}>
+                            <Image key={index} src={item.value} alt={""} fill sizes={"35vw"}/>
                         </div>
                     )
+                if (item.type === "element")
+                    return item.value;
             })}
         </div>
     );

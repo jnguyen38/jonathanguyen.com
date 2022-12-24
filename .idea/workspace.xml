@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c870200e-edfe-41b7-8028-07f89e32107e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/media/images/about/cows.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/images/about/dome-hyperlapse.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/images/about/outlook.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/images/about/paragliding-solo.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/images/about/photography-bath.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/images/about/photography-london.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/images/about/sisters.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/media/images/about/suspension.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.js" afterDir="false" />
@@ -36,7 +44,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/jnguy/GitHub/jonathanguyen.com/public/files",
+    "last_opened_file_path": "C:/Users/jnguy/GitHub/jonathanguyen.com/public/media/images/about",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -49,14 +57,15 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jnguy\GitHub\jonathanguyen.com\public\media\images\about" />
       <recent name="C:\Users\jnguy\GitHub\jonathanguyen.com\public\files" />
       <recent name="C:\Users\jnguy\GitHub\jonathanguyen.com\public\media\icons" />
       <recent name="C:\Users\jnguy\GitHub\jonathanguyen.com\public\media\images\projects" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jnguy\GitHub\jonathanguyen.com\public\media\images\about" />
       <recent name="C:\Users\jnguy\GitHub\jonathanguyen.com\public\media\images\projects" />
       <recent name="C:\Users\jnguy\GitHub\jonathanguyen.com\public\media\icons" />
-      <recent name="C:\Users\jnguy\GitHub\jonathanguyen.com\public\media\images\about" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

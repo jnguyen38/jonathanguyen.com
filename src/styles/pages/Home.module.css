@@ -75,6 +75,8 @@
 
 .aboutAR {aspect-ratio: 1/1 !important;}
 .projectAR {aspect-ratio: 16/9 !important;}
+.midAR {aspect-ratio: 3/2 !important;}
+.profileAR {aspect-ratio: 3/4 !important;}
 
 .imgOverlay {
     display: flex;
@@ -108,6 +110,14 @@
     color: var(--theme-black);
     box-shadow: 0 0 3px var(--border-color);
     cursor: default;
+}
+
+.projectDim {
+    width: min(500px, 100%);
+}
+
+.aboutDim {
+    width: min(300px, 100%);
 }
 
 @keyframes fade-in {

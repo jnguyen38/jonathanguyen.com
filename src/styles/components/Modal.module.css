@@ -125,8 +125,9 @@
 }
 
 .modalImg {
-    width: 100%;
+    align-self: center;
     position: relative;
+    box-shadow: 0 0 5px #888;
 }
 
 @media (max-width: 768px) {
