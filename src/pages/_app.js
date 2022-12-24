@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import CustomParticles from "../components/Particles";
 
 export default function App({ Component, pageProps }) {
+    const [loaded, setLoaded] = useState(false);
     const [theme, setTheme] = useState(false);
     const [particles, setParticles] = useState(true);
 
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }) {
 
         const localTheme = JSON.parse(window.localStorage.getItem("theme"));
         setTheme(localTheme);
+        setLoaded(true);
     }, [])
 
     useEffect(() => {
@@ -23,7 +25,7 @@ export default function App({ Component, pageProps }) {
     function toggleTheme() {setTheme(curr => !curr)}
     function toggleParticles() {setParticles(curr => !curr)}
 
-    return (
+    return loaded  && (
         <div className={theme ? "theme light-mode" : "theme dark-mode"}>
             <Header theme={theme} toggleTheme={toggleTheme} particles={particles} toggleParticles={toggleParticles}/>
             <Component theme={theme} {...pageProps}/>

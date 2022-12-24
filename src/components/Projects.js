@@ -1,15 +1,15 @@
 import styles from "../styles/pages/Home.module.css";
 import Image from "next/image";
-import {useRef, useState} from "react";
+import {useState} from "react";
 import {InfoModal} from "./Modal";
 
 import studybuddy from "../../public/media/images/projects/studybuddy.webp";
 import statifySong from "../../public/media/images/projects/statify-song.webp";
-import thisWebsite from "../../public/media/images/projects/thiswebsite-4.webp";
 import sliceOfLife from "../../public/media/images/projects/sliceoflife.webp";
 import statifyArtist from "../../public/media/images/projects/statify-artist.webp";
 import cli from "../../public/media/images/projects/cli.png";
 import crypto from "../../public/media/images/projects/crypto.png";
+import thisWeb from "../../public/media/images/projects/thisweb.png";
 
 export default function Projects() {
     const [show, setShow] = useState(false);
@@ -25,7 +25,7 @@ export default function Projects() {
             tags: ["ReactJS", "AWS Lightsail", "MySQL", "CRA", "WebDev", "ExpressJS", "Node", "Nginx", "SSL", "Git"],
             content: [
                 {type: "section", value: "Description"},
-                {type: "text", value: "This is StudyBuddy. This is by far my most extensive and complicated project that I've worked on in regard to Web Development. StudyBuddy is an all-in-one web application for helping students at Notre Dame study. Think of it like a Yelp! for study spots on campus. It has a database of hundreds of spaces to study, with a variety of study space attributes like loudness, natural lighting, outlet availability, etc. The site comes with a fully functional user authentication system. You can search for study spaces based on any of these attributes, and if logged in, you can even get study space recommendations based on your location or your like/review history."},
+                {type: "text", value: "This is StudyBuddy. This is by far my most extensive and complicated project that I've worked on in regard to Web Development. StudyBuddy is an all-in-one web application for helping students at Notre Dame study. Think of it like a Yelp! for study spots on campus. It has a database of hundreds of spaces to study, with a variety of study space attributes like loudness, natural lighting, outlet availability, etc. You can search for study spaces based on any of these attributes, and if logged in, you can even get study space recommendations based on your location or your like/review history."},
                 {type: "section", value: "Development"},
                 {type: "text", value: "The tech stack my team and I used to build StudyBuddy is MySQL, Express, ReactJS, Node (MERN variation) stack. I hosted the frontend of the site with Vercel. As for the backend of StudyBuddy, we created our RESTful API endpoints with Express.js, and I hosted a Node server on my Amazon Web Services (AWS) Lightsail virtual private server (VPS) instance. The majority of API requests queried from a MySQL command line client that I installed on my AWS Lightsail instance. I also needed to manually attach an SSL certificate from LetsEncrypt so that my VPS could handle https requests from the client. In an effort to handle a significant number of simultaneous API requests, I also decided to install Nginx on my Lightsail instance to act as a reverse proxy and load balancer. Nginx will also help for any other backend servers that I decide to host on my VPS."},
                 {type: "text", value: "Overall, the project was a deep dive into full stack development, but I feel like it really expanded my horizons for any other full stack development I might want to embark on in the future. I ended up being really happy with the site because of its responsiveness and scalability that we implemented along the way. I hope you give it a try!"}
@@ -46,7 +46,7 @@ export default function Projects() {
             ]
         },
         {
-            id: 2, type: "Web Development", name: "This Website (Recursive! Wow!)", src: thisWebsite,
+            id: 2, type: "Web Development", name: "This Website (Recursive! Wow!)", src: thisWeb,
             github: "https://github.com/jnguyen38/jonathanguyen.com",
             website: "https://jonathanguyen.com",
             tags: ["ReactJS", "NextJS", "WebDev", "Node", "TSParticles", "Git"],
