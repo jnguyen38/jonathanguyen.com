@@ -31,6 +31,10 @@ export default function Header(props) {
     function scrollTo(element) {
         if (window.location.pathname !== "/")
             window.location.replace(`/`);
+        if (element === "top") {
+            window.scrollTo({top: 0, behavior: "smooth"});
+            return;
+        }
 
         let elem = document.getElementById(element);
         elem.scrollIntoView({
@@ -52,7 +56,7 @@ export default function Header(props) {
     return (
         <div className={`${styles.header} d-flex jc-sb`}>
             <div className={`d-flex gap-3`}>
-                <Link href={`/`} className={`${styles.title} fw-7 fs-sm`}>jonathan nguyen</Link>
+                <p onClick={() => scrollTo(`top`)} className={`${styles.title} fw-7 fs-sm clickable`}>jonathan nguyen</p>
                 <div className={`${styles.toggleHeader}`}>
                     <Toggles {...props} size={20}/>
                 </div>

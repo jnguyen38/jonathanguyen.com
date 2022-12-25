@@ -5,14 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Particles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Particles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Projects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/Modal.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Modal.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/root.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/root.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
