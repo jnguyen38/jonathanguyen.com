@@ -29,7 +29,7 @@ function Intro(props) {
 
 export default function index(props) {
     return (
-        <div>
+        <div className={`relative`}>
             <Head>
                 <title>Jonathan Nguyen | Notre Dame | Computer Science</title>
                 <meta name="description" content="Next.js app created by Jonathan Nguyen, a computer science and engineering student at the University of Notre Dame." />
@@ -39,7 +39,7 @@ export default function index(props) {
                 <meta property="og:image" content="https://jonathanguyen.com/images/about/climbing-solo.webp"/>
                 <link rel="icon" href="/media/icons/favicon.png" />
             </Head>
-            <main>
+            <main className={`relative`}>
                 <Intro {...props}/>
                 <About/>
                 <Projects/>

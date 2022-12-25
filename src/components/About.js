@@ -23,10 +23,6 @@ import {useState} from "react";
 import {InfoModal} from "./Modal";
 
 export default function About() {
-    const [show, setShow] = useState(false);
-    const [data, setData] = useState({id: -1});
-    const [id, setId] = useState(0);
-
     const aboutData = [
         {
             size: styles.main, id: 0, type: "Hobby", name: "Rock Climbing", src: climbingSolo,
@@ -106,13 +102,16 @@ export default function About() {
                 {type: "image", value: suspension, AR: styles.midAR, dim: styles.projectDim},
                 {type: "section", value: "Innovate-o-Thon"},
                 {type: "text", value: "One achievement I was more proud of this semester was getting winning a prize at Notre Dame's annual Innovate-o-Thon. It's an innovation challenge where student compete in teams to see who can come up with the best solution to a real world problem. This year, Marmon Holdings, Inc. challenged the teams to come up with a lightweight and cost effective alternative to outrigger pads. My team came up with an alluminum alloy modular design that won us 2nd place and $1,250 in prizes. It was a lot of fun staying up with my friends until 6am then presenting our design at 8am :) - but really, it was a great experience. It was my first time entering a competition like this and my winning any sort of prize from a competition, so the entire event was really exciting (Thanks Paul!)"},
-                {type: "element", value: <a href={"https://engineering.nd.edu/news/51-students-10-teams-16-hours-2022-fall-nd-engineering-innovate-o-thon/"} className={`blue-text underline mb-3 fw-2`}>Link to Article</a>},
+                {type: "element", value: <a href={"https://engineering.nd.edu/news/51-students-10-teams-16-hours-2022-fall-nd-engineering-innovate-o-thon/"} className={`blue-text underline mb-3 fw-2`} key={123012}>Link to Article</a>},
                 {type: "image", value: innovate, AR: styles.aboutAR, dim: styles.aboutDim},
                 {type: "section", value: "What's Next"},
                 {type: "text", value: "With the fall semester just wrapping up at the time of this writing, I'll be going to Dublin soon to take part in my spring semester abroad. Until then, Christmas, New Years, a few projects here and there, and then I'm off. Can't wait to say the least."}
             ]
         },
     ];
+    const [show, setShow] = useState(false);
+    const [data, setData] = useState(aboutData[0]);
+    const [id, setId] = useState(0);
 
     function handleShow(num) {
         setShow(true);

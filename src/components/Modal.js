@@ -46,8 +46,8 @@ function ModalDesc(props) {
                     return <p key={index} className={`fw-5 fs-sm mb-1`}>{item.value}</p>
                 if (item.type === "image")
                     return (
-                        <div className={`${styles.modalImg} ${item.dim} ${item.AR} mb-5`}>
-                            <Image key={index} src={item.value} alt={""} fill sizes={"35vw"}/>
+                        <div key={index} className={`${styles.modalImg} ${item.dim} ${item.AR} mb-5`}>
+                            <Image src={item.value} alt={""} fill sizes={"35vw"}/>
                         </div>
                     )
                 if (item.type === "element")
@@ -78,25 +78,23 @@ function AboutImage(props) {
 }
 
 export function InfoModal(props) {
-    if (!props.show) return;
-
     return (
-        <div className={`${styles.modal} d-flex-row-c`} onClick={props.close}>
-            <div className={`${styles.modalShift} d-flex-col-c no-select`} onClick={e => {e.stopPropagation(); props.shift(-1);}}>
+        <div className={`${styles.modal} ${props.show && styles.showModal} d-flex-row-c`} onClick={props.close}>
+            <div className={`${styles.modalShift} ${props.show && styles.showShift} d-flex-col-c no-select`} onClick={e => {e.stopPropagation(); props.shift(-1);}}>
                 <Image src={arrowLeft} alt="" width={28} height={28}/>
             </div>
-            <div className={`${styles.modalProject}`} onClick={e => e.stopPropagation()}>
+            <div className={`${styles.modalProject} ${props.show && styles.showProject}`} onClick={e => e.stopPropagation()}>
                 <div className={`${styles.close} d-flex-row-c p-1 m-1 clickable`} onClick={props.close}>
                     <Image src={close} alt={''} width={18} height={18}/>
                 </div>
-                {props.type === "project" ? <ProjectImage data={props.data}/> : <AboutImage data={props.data}/>}
+                {props.type === "project" ? <ProjectImage data={props.data} show={props.show}/> : <AboutImage data={props.data} show={props.show}/>}
                 <div className={`${styles.modalContent} p-4 d-flex-col-l gap-2 mb-3`}>
                     <ModalTitle data={props.data}/>
                     <ModalTags data={props.data}/>
                     <ModalDesc data={props.data}/>
                 </div>
             </div>
-            <div className={`${styles.modalShift} d-flex-col-c no-select`} onClick={e => {e.stopPropagation(); props.shift(1)}}>
+            <div className={`${styles.modalShift} ${props.show && styles.showShift} d-flex-col-c no-select`} onClick={e => {e.stopPropagation();props.shift(1)}}>
                 <Image src={arrowRight} alt="" width={28} height={28}/>
             </div>
         </div>
@@ -104,18 +102,16 @@ export function InfoModal(props) {
 }
 
 export function SettingsModal(props) {
-    if (!props.show) return;
-
     return (
-        <div className={`${styles.modal} d-flex-col-c`} onClick={props.close}>
-            <div className={`${styles.modalMain}`} onClick={e => e.stopPropagation()}>
-                <div className={`${headerStyles.modalHeader} d-flex-col-c gap-3`}>
-                    <p onClick={() => props.scrollTo(`about`)} className={`clickable fw-2 fs-md`}>about</p>
-                    <p onClick={() => props.scrollTo(`projects`)} className={`clickable fw-2 fs-md`}>projects</p>
-                    <p onClick={() => props.scrollTo(`experience`)} className={`clickable fw-2 fs-md`}>experience</p>
-                    <p onClick={() => props.scrollTo(`skills`)} className={`clickable fw-2 fs-md`}>skills</p>
-                    <Socials size={32} gap={3} margin={5} theme={props.theme}/>
-                    <Toggles {...props} size={32}/>
+        <div className={`${styles.modal} ${props.show && styles.showModal} d-flex-col-c`} onClick={props.close}>
+            <div className={`${styles.modalMain} ${props.show && styles.showMain}`} onClick={e => e.stopPropagation()}>
+                <div className={`${headerStyles.modalHeader} ${props.show && headerStyles.animation} d-flex-col-l ml-5 pl-2 gap-2`}>
+                    <p onClick={() => props.scrollTo(`about`)} className={`clickable fw-2 fs-sm`}>about</p>
+                    <p onClick={() => props.scrollTo(`projects`)} className={`clickable fw-2 fs-sm`}>projects</p>
+                    <p onClick={() => props.scrollTo(`experience`)} className={`clickable fw-2 fs-sm`}>experience</p>
+                    <p onClick={() => props.scrollTo(`skills`)} className={`clickable fw-2 fs-sm`}>skills</p>
+                    <Socials size={24} gap={2} margin={4} theme={props.theme}/>
+                    <Toggles {...props} size={24}/>
                 </div>
             </div>
         </div>

@@ -23,8 +23,8 @@ export default function CustomParticles(props) {
             loaded={particlesLoaded}
             options={{
                 background: {
-                    color: {value: props.theme ? "#ffffff" : "#333333"},
-                    opacity: 1
+                    color: {value: "#ffffff"},
+                    opacity: 0
                 },
                 fpsLimit: props.particles ? 30 : 0,
                 interactivity: {

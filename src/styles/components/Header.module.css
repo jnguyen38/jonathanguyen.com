@@ -9,15 +9,24 @@
     backdrop-filter: blur(5px);
     flex-wrap: wrap;
     z-index: 10;
+    transition: background-color 500ms;
+}
+
+.title {
+    transition: all 200ms ease-in-out;
+}
+
+.title:hover {
+    transform: scale(.96);
 }
 
 .menu {
     display: none;
     width: 25px;
     padding: .5em;
-    transition: all 250ms;
     border-radius: var(--border-radius);
-    z-index: 150;
+    z-index: 1000;
+    transition: all 500ms;
 }
 
 .menu span {
@@ -37,6 +46,35 @@
 
 .modalHeader {
     height: 100%;
+}
+
+.headerLinks p {
+    transition: color 200ms;
+}
+
+.headerLinks p:hover {
+    color: #bbbbbb;
+}
+
+.animation * {
+    animation: 600ms ease-in-out slide-left;
+}
+
+.animation *:nth-child(2) {animation-delay: 50ms}
+.animation *:nth-child(3) {animation-delay: 100ms}
+.animation *:nth-child(4) {animation-delay: 150ms}
+.animation *:nth-child(5) {animation-delay: 200ms}
+.animation *:nth-child(6) {animation-delay: 250ms}
+
+@keyframes slide-left {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @media (max-width: 900px) {

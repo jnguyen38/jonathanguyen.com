@@ -31,7 +31,8 @@ export default function App({ Component, pageProps }) {
             <Component theme={theme} {...pageProps}/>
             <Footer/>
             <Analytics/>
-            {particles ? <CustomParticles theme={theme} particles={particles}/> : <div className={"defaultBG"}/>}
+            {particles && <CustomParticles particles={particles}/>}
+            <div className={"defaultBG"}/>
         </div>
     )
 }

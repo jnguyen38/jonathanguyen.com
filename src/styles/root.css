@@ -15,6 +15,10 @@
   --result-margin-bottom: 20px;
 }
 
+.relative {
+  position: relative;
+}
+
 body {
   margin: 0;
   font-family: "Outfit", "Yellowtail", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -241,7 +245,7 @@ a:link { text-decoration: none; }
 }
 
 .defaultBG {
-  z-index: -1;
+  z-index: -2;
   position: fixed;
   top: 0;
   right: 0;
@@ -250,6 +254,7 @@ a:link { text-decoration: none; }
   width: 100%;
   height: 100%;
   background-color: var(--reg-bg-solid);
+  transition: background-color 500ms;
 }
 
 @font-face {

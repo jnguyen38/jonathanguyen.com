@@ -52,7 +52,7 @@ export default function Header(props) {
     return (
         <div className={`${styles.header} d-flex jc-sb`}>
             <div className={`d-flex gap-3`}>
-                <Link href={`/`} className={`fw-7 fs-sm`}>jonathan nguyen</Link>
+                <Link href={`/`} className={`${styles.title} fw-7 fs-sm`}>jonathan nguyen</Link>
                 <div className={`${styles.toggleHeader}`}>
                     <Toggles {...props} size={20}/>
                 </div>
@@ -64,9 +64,10 @@ export default function Header(props) {
                 <p onClick={() => scrollTo(`skills`)} className={`clickable`}>skills</p>
                 <Socials size={20} gap={2} margin={0} theme={props.theme}/>
             </div>
-            <div id={`menu`} className={`${styles.menu} ${menu ? styles.rotated : ""} d-flex-col-c gap-1`} onClick={handleMenu}>
+            <div id={`menu`} className={`${styles.menu} ${menu ? styles.rotated : ""} d-flex-col-c gap-1 clickable`} onClick={handleMenu}>
                 <span/><span/><span/>
             </div>
+
             <SettingsModal close={close} show={menu} scrollTo={scrollTo} {...props}/>
         </div>
     )

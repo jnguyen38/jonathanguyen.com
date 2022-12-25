@@ -12,10 +12,6 @@ import crypto from "../../public/media/images/projects/crypto.png";
 import thisWeb from "../../public/media/images/projects/thisweb.png";
 
 export default function Projects() {
-    const [show, setShow] = useState(false);
-    const [data, setData] = useState({id: -1});
-    const [id, setId] = useState(0);
-
     const projectData = [
         {
             id: 0, type: "Web Development", name: "StudyBuddyND", src: studybuddy,
@@ -107,6 +103,11 @@ export default function Projects() {
             ]
         }
     ]
+
+    const [show, setShow] = useState(false);
+    const [data, setData] = useState(projectData[0]);
+    const [id, setId] = useState(0);
+
 
     function handleShow(num) {
         setShow(true);
