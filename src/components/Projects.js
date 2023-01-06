@@ -56,7 +56,6 @@ export default function Projects() {
         {
             id: 3, type: "Non Profit", name: "Slice of Life", src: sliceOfLife,
             github: "https://github.com/jnguyen38/slice-of-life",
-            website: "https://sliceoflifesb.org",
             tags: ["ReactJS", "CRA", "MySQL", "WebDev", "Node", "Git", "AWS Lightsail", "Non-Profit"],
             content: [
                 {type: "section", value: "What is Slice of Life"},

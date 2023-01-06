@@ -1,5 +1,4 @@
 import styles from "../styles/components/Header.module.css";
-import Link from "next/link";
 import Socials from "./Socials";
 import {useState} from "react";
 import {SettingsModal} from "./Modal";
