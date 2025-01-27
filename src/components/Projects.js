@@ -130,7 +130,7 @@ export default function Projects() {
         function closeOverlay(num) {document.getElementById(`project-${num}`).style.opacity = "0";}
 
         return (
-            <div className={`${styles.displayItem} ${styles.projectAR} clickable no-select`}
+            <div className={`${styles.displayItem}  clickable no-select`}
                  onClick={() => handleShow(props.id)} onMouseOver={() => showOverlay(props.id)} onMouseOut={() => closeOverlay(props.id)}>
                 <div className={`${styles.projectContainer} ${styles.projectAR}`}>
                     <div className={`${styles.imgParent} ${styles.projectAR}`}>

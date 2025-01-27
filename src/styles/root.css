@@ -6,7 +6,7 @@
   --theme-white: #ffffff;
   --theme-blue: #1c5d99;
   --theme-light-blue: #bbcde5;
-  --image-overlay: rgba(28, 93, 153, .7);
+  --image-overlay: rgba(166, 166, 166, 0.7);
   --border-color: #cbcbcb;
   --warning-bg: #fdefef;
   --warning-text: #fd0001;
@@ -17,6 +17,19 @@
 
 .relative {
   position: relative;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100px);
+  transition: opacity 1s ease-out;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
 }
 
 body {

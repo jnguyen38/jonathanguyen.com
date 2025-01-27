@@ -26,7 +26,7 @@ export default function Header(props) {
     return (
         <div className={`${styles.header} d-flex jc-sb gap-40`}>
             <div className={`d-flex gap-3`}>
-                <p onClick={() => scrollTo(`top`)} className={`${styles.title} fw-7 fs-sm clickable`}>jonathan nguyen</p>
+                <p onClick={() => props.scrollTo(`top`)} className={`${styles.title} fw-7 fs-sm clickable`}>jonathan nguyen</p>
                 <div className={`${styles.toggleHeader}`}>
                     <Toggles {...props} size={15}/>
                 </div>

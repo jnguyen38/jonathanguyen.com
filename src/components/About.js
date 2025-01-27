@@ -34,9 +34,9 @@ export default function About() {
                 {type: "text", value: "Even though I don't get to climb as much anymore, climbing is still my favorite thing to do in my free time by far. I love the problem solving involved, the physical intensity, and the people that I meet wherever the sport takes me. Whether it's at my local gym, on real rock at The Powerlinez or the Red River Gorge, I know that I'll always find an amazing community of climbers."},
                 {type: "text", value: "One community in particular that I want to give a shout out to is the climbing club of Notre Dame. These guys are the best to hang out with, climb with, and just be around in general. If any of you guys are reading this: Never frills, always blue collar."},
                 {type: "image", value: climbingGroup, AR: styles.aboutAR, dim: styles.aboutDim},
-                {type: "section", value: "wHaT GRaDe dO yOu CliMB?"},
-                {type: "text", value: "If anyone out there is actually interested, I mainly boulder around V6-V8 indoors. When I can go outdoors, I mainly stay in the V4-V6 range (it's a whole 'nother beast) and redpointed 5.12a on lead. I've been to The Powerlinez reserve in North Jersey a few times and climbed at a decent number of crags in the Red River Gorge (Miguel's Pizza, sponsor me!)."},
-                {type: "text", value: "Some of my goals that I've been working towards have been the full front lever for at least 5 seconds, a full ROM OAP from a dead hang, and a full human flag for at least 5 seconds."}
+                {type: "section", value: "Experience"},
+                {type: "text", value: "If anyone out there is actually interested, I mainly boulder around V7-V9 indoors depending on the gym. When I can go outdoors, I mainly stay in the V4-V6 range and redpointed 5.12a on lead. I've been to the Powerlinez reserve in North Jersey a few times and climbed at a decent number of crags in the Red River Gorge (Miguel's Pizza, sponsor me!)."},
+                {type: "text", value: "Some of my goals that I've been working towards have been the full front lever for 5 seconds, a full one arm pull up from a dead hang, and a full human flag for 5 seconds."}
             ]
         },
         {
@@ -54,7 +54,7 @@ export default function About() {
                 {type: "image", value: toga, AR: styles.aboutAR, dim: styles.aboutDim},
                 {type: "text", value: "Across all my close friends, I've made some amazing memories. Anything from skydiving in the Smoky Mountains, kayaking in Switzerland, toga dances in the hallway, or even just Christmas parties in our dorms together. These people are some of my favorite in the world, and I'm really blessed to have found them."},
                 {type: "image", value: christmas, AR: styles.aboutAR, dim: styles.aboutDim},
-                {type: "smalltext", value: "Damien, Chase, TJ, Chuck, Ready, Dom, Cat, Andrea, Andrew, Tmerc, Brooke, Peter, Ryan, Mary, Annie, Tara, Conor, Peter, Mikey, Griff, Dylan, DLM, Keaton, Rory, Ian, Emilio, Soph, Maddie, Chloe, Mary, Anna, Tommy, or Holly: If you're reading this, you're the best!"}
+                {type: "smalltext", value: "Em, Damien, Chase, TJ, Chuck, Ready, Dom, Tmerc, Peter A, Ryan, Conor, Peter R, Mikey, Griff, David, Keaton, Rory, Ian, Emilio, Cat, Andrea, Andrew, Anna, Tommy, Kopp: If you're reading this, I'm wishing you all the best!"}
             ]
         },
         {
@@ -156,7 +156,7 @@ export default function About() {
         <div id={`about`} className={`${styles.about} gap-2`}>
             <h2 className={`fw-6 fs-md`}>About.</h2>
             <p className={`${styles.description} fw-2 fs-sm`}>
-                Aside from academics, I love doing four things in life: rock <span className={`fw-5`}>climbing</span>,
+                Aside from academics, I love doing some things in particular: rock <span className={`fw-5`}>climbing</span>,
                 playing <span className={`fw-5`}>guitar</span>, <span className={`fw-5`}>photography</span>,
                 and being with close <span className={`fw-5`}>friends and family</span>. My writing is a little drawn out, but feel free to
                 learn more about me below.

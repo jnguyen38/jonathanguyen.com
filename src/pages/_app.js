@@ -10,7 +10,7 @@ import Footer from "../components/Footer";
 export default function App({ Component, pageProps }) {
     const [loaded, setLoaded] = useState(false);
     const [theme, setTheme] = useState(false);
-    const [particles, setParticles] = useState(true);
+    const [particles, setParticles] = useState(false);
     const [menu, setMenu] = useState(false);
 
     function scrollTo(element) {
