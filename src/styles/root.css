@@ -11,7 +11,7 @@
   --warning-bg: #fdefef;
   --warning-text: #fd0001;
   --border-radius: 5px;
-  --header-height: 70px;
+  --header-height: 65px;
   --result-margin-bottom: 20px;
 }
 
@@ -45,10 +45,11 @@ tab {
 .theme {
   background-color: var(--reg-bg-solid);
   color: var(--reg-text-color);
+  overflow-x: hidden;
 }
 
 .dark-mode {
-  --inverted-bg-solid: var(--theme-white);
+  --inverted-bg-solid: rgba(255, 255, 255, .4);
   --inverted-bg-transparent: rgba(242, 239, 233, .4);
   --inverted-bg-transparent-dark: rgba(242, 239, 233, .7);
   --inverted-text-color: var(--theme-black);
@@ -63,7 +64,7 @@ tab {
 }
 
 .light-mode {
-  --inverted-bg-solid: var(--theme-black);
+  --inverted-bg-solid: rgba(0, 0, 0, .3);
   --inverted-bg-transparent: rgba(28, 93, 153, .4);
   --inverted-bg-transparent-dark: rgba(28, 93, 153, .8);
   --inverted-text-color: var(--theme-white);

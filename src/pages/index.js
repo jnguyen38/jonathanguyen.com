@@ -1,11 +1,10 @@
 import styles from "../styles/pages/Home.module.css";
-
-import Head from "next/head";
 import Socials from "../components/Socials";
 import Skills from "../components/Skills";
 import About from "../components/About";
 import Projects from "../components/Projects";
 import Experience from "../components/Experience";
+import Footer from "../components/Footer";
 
 function Intro(props) {
     return (
@@ -29,23 +28,13 @@ function Intro(props) {
 
 export default function index(props) {
     return (
-        <div className={`relative`}>
-            <Head>
-                <title>Jonathan Nguyen | Notre Dame | Computer Science</title>
-                <meta name="description" content="Next.js app created by Jonathan Nguyen, a computer science and engineering student at the University of Notre Dame." />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta property="og:title" content="Jonathan Nguyen | Notre Dame | Computer Science" />
-                <meta property="og:description" content="Next.js app created by Jonathan Nguyen, a computer science and engineering student at the University of Notre Dame."/>
-                <meta property="og:image" content="https://jonathanguyen.com/images/about/climbing-solo.webp"/>
-                <link rel="icon" href="/media/icons/favicon.png" />
-            </Head>
-            <main className={`relative`}>
-                <Intro {...props}/>
-                <About/>
-                <Projects/>
-                <Experience/>
-                <Skills/>
-            </main>
-        </div>
+        <main className={`relative`}>
+            <Intro {...props}/>
+            <About/>
+            <Projects/>
+            <Experience/>
+            <Skills/>
+            <Footer/>
+        </main>
     )
 }

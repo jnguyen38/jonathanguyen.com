@@ -1,15 +1,15 @@
 .header {
     height: var(--header-height);
-    border-bottom: 1px solid var(--inverted-bg-solid);
-    padding-inline: 12%;
-    width: 76%;
+    border: 1px solid var(--inverted-bg-solid);
+    border-radius: 50px;
+    padding: 0 50px;
     position: fixed;
-    top: 0;
+    top: 3vh;
     background-color: var(--reg-bg-transparent);
     backdrop-filter: blur(5px);
     flex-wrap: wrap;
     z-index: 10;
-    transition: background-color 500ms;
+    transition: all 500ms;
 }
 
 .title {
@@ -81,7 +81,7 @@
     .header {
         padding-right: 5%;
         padding-left: 10%;
-        width: 85%;
+        width: 70%;
     }
     .headerLinks {display: none;}
     .toggleHeader {display: none;}
