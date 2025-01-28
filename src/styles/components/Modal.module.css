@@ -41,7 +41,7 @@
     width: min(400px, 75%);
     height: 100vh;
     margin-left: auto;
-    transition: right 600ms, background-color 600ms;
+    transition: right 600ms, background-color 500ms;
 }
 
 .hideMain {
