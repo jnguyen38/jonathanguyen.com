@@ -12,7 +12,7 @@ export default function Experience() {
 
     function ExperienceItem(props) {
         return (
-            <div className={`${styles.displayItem} black-text d-flex-col-l gap-2 p-3 pr-4`}>
+            <div className={`${styles.displayItem} d-flex-col-l gap-2 p-5 pl-4 my-2`}>
                 <div className={`d-flex jc-sb full-width`}>
                     <div className={`d-flex-col-l`}>
                         <p className={`fw-2`}>{props.company}</p>
@@ -23,7 +23,7 @@ export default function Experience() {
                 <div className={`full-width d-flex-col-l gap-2`}>
                     {props.points.map((point, index) => {
                         return (
-                            <p key={index} className={`${styles.listContainer} ${styles.exploreLine} ml-4 pl-4 fw-2 fs-sm`}>{point}</p>
+                            <p key={index} className={`${styles.experienceListItem} ${styles.exploreLine} ml-4 pl-4 fw-2 fs-sm`}>{point}</p>
                         )
                     })}
                 </div>
@@ -33,7 +33,7 @@ export default function Experience() {
 
     return (
         <div id={`experience`} className={`${styles.experience} gap-2`}>
-            <h2 className={`fw-6 fs-md`}>Experience.</h2>
+            <h2 className={`fw-6 fs-md`}>experience.</h2>
             <p className={`${styles.description} fw-2 fs-sm`}>
                 So far, I&#39;ve been lucky enough to take part in a wide variety of work experiences
                 since my first year at Notre Dame. Although I&#39;m always <span className={`fw-5`}>searching for more opportunities</span>,

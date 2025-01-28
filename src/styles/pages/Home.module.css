@@ -1,32 +1,46 @@
 .intro {
-    min-height: calc(80vh - var(--header-height)*2);
-    width: min(100%, 600px);
+    min-height: calc(100vh - var(--header-height)*2);
+    width: 100%;
+    gap: 100px;
+}
+
+.introInfo {
     animation: fade-in 1s ease-in-out;
+    width: min(100%, 500px)
+}
+
+.profilePicContainer {
+    animation: fade-in 1s ease-in-out;
+    width: 250px;
+    height: 250px;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 2px solid white;
 }
 
 .about, .projects, .experience, .skills {
     padding-top: calc(var(--header-height) * 1.5);
-    min-height: 60vh;
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.about {
-    width: min(900px, 100%);
+.description {
+    text-align: center;
+    width: min(100%, 600px);
 }
-
-.description {width: min(100%, 600px);}
 
 .aboutDisplay {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 3fr 2fr;
+    width: 100%;
 }
 
 .projectDisplay {
     grid-template-columns: repeat(2, 1fr);
-    width: min(900px, 100%);
+    width: 100%;
 }
 
 .exploreDisplay {
@@ -34,8 +48,10 @@
 }
 
 .displayItem {
-    background-color: rgba(244, 244, 244, .9);
-    box-shadow: 0 0 4px var(--border-color);
+    background-color: rgb(42, 42, 42);
+    box-shadow: 0 0 5px rgba(255, 255, 255, .5);
+    border: solid 1px rgba(255, 255, 255, .5);
+    border-radius: 40px;
     position: relative;
 }
 
@@ -43,6 +59,7 @@
     grid-column: span 6;
     grid-row: span 3;
 }
+
 
 .side {
     grid-column: span 4;
@@ -60,15 +77,25 @@
 }
 
 .listContainer {
-    border-left: 2px solid var(--inverted-bg-solid);
+    width: 80%;
+}
+
+.experienceListItem {
+    border-left: 2px solid #bbb;
+}
+
+.modalTitle {
+    border-left: 4px solid black;
 }
 
 .exploreLine {
-    border-color: var(--theme-black);
+    border-color: #555;
 }
 
 .imgParent {
     position: relative;
+    border-radius: 25px;
+    overflow: hidden;
     width: 100%;
     height: auto;
 }
@@ -87,30 +114,32 @@
     width: 80%;
     height: calc(100% - 60px);
     background-color: var(--image-overlay);
-    box-shadow: 0 0 5px var(--theme-blue);
+    border-radius: 39px;
     opacity: 0;
     transition: all 200ms;
     color: var(--theme-white);
+    overflow: hidden;
 }
 
 .overlayText {border-left: 1px solid var(--theme-white);}
-.img {box-shadow: 0 0 10px var(--border-color);}
 
 .skills {
     min-height: 40vh;
-    width: min(900px, 100%);
 }
 
 .skillsGap {
-    gap: .75em;
+    gap: 10px;
 }
 
 .skill {
-    background-color: #eeeeee;
-    color: var(--theme-black);
+    min-width: 40px;
+    border-radius: 5px;
+    background-color: transparent;
     box-shadow: 0 0 3px var(--border-color);
     cursor: default;
 }
+
+
 
 .projectDim {
     width: min(500px, 100%);
@@ -121,8 +150,19 @@
 }
 
 @keyframes fade-in {
-    from {height: 120vh; opacity: 0;}
-    to {height: 60vh; opacity: 1;}
+    from {
+        transform: translateY(100px);
+        filter: blur(3px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        filter: blur(0);
+        opacity: 1;
+    }
 }
 
 /* Phone Screen */
@@ -132,7 +172,10 @@
     .aboutContainer {padding: 0;width: 100%;}
     .projectContainer {padding: 0; width: 100%;}
     .main, .side {grid-column: span 1;}
-    .displayItem {box-shadow: none;}
+    .displayItem {box-shadow: none; border: none}
+    .imgParent {
+        border-radius: 39px;
+    }
     .imgOverlay {
         opacity: 1;
         display: flex;
