@@ -102,7 +102,6 @@ export function SettingsModal(props) {
                     <p onClick={() => props.scrollTo(`projects`)} className={`clickable fw-2 fs-sm`}>projects</p>
                     <p onClick={() => props.scrollTo(`experience`)} className={`clickable fw-2 fs-sm`}>experience</p>
                     <p onClick={() => props.scrollTo(`skills`)} className={`clickable fw-2 fs-sm`}>skills</p>
-                    <p onClick={props.close} className={`clickable fw-2 fs-sm mt-40`}>close menu</p>
                     <Socials size={24} gap={2} margin={4} theme={props.theme}/>
                     <Toggles {...props} size={24}/>
                 </div>

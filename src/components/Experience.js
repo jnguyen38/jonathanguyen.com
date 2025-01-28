@@ -23,7 +23,7 @@ export default function Experience() {
                 <div className={`full-width d-flex-col-l gap-2`}>
                     {props.points.map((point, index) => {
                         return (
-                            <p key={index} className={`${styles.listContainer} ${styles.exploreLine} ml-4 pl-4 fw-2 fs-sm`}>{point}</p>
+                            <p key={index} className={`${styles.experienceListItem} ${styles.exploreLine} ml-4 pl-4 fw-2 fs-sm`}>{point}</p>
                         )
                     })}
                 </div>
