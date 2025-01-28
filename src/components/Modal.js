@@ -7,8 +7,6 @@ import Socials, {Links} from "./Socials";
 import {Toggles} from "./Header";
 
 import close from "../../public/media/icons/close.png";
-import arrowLeft from "../../public/media/icons/arrow-left.png";
-import arrowRight from "../../public/media/icons/arrow-right.png";
 
 function ModalTitle(props) {
     return (
@@ -80,9 +78,6 @@ function AboutImage(props) {
 export function InfoModal(props) {
     return (
         <div className={`${styles.modal} ${props.show && styles.showModal} d-flex-row-c`} onClick={props.close}>
-            <div className={`${styles.modalShift} ${props.show && styles.showShift} d-flex-col-c no-select`} onClick={e => {e.stopPropagation(); props.shift(-1);}}>
-                <Image src={arrowLeft} alt="" width={28} height={28}/>
-            </div>
             <div className={`${styles.modalProject} ${props.show && styles.showProject}`} onClick={e => e.stopPropagation()}>
                 <div className={`${styles.close} d-flex-row-c p-1 m-1 clickable`} onClick={props.close}>
                     <Image src={close} alt={''} width={18} height={18}/>
@@ -93,9 +88,6 @@ export function InfoModal(props) {
                     <ModalTags data={props.data}/>
                     <ModalDesc data={props.data}/>
                 </div>
-            </div>
-            <div className={`${styles.modalShift} ${props.show && styles.showShift} d-flex-col-c no-select`} onClick={e => {e.stopPropagation();props.shift(1)}}>
-                <Image src={arrowRight} alt="" width={28} height={28}/>
             </div>
         </div>
     );

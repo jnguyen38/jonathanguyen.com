@@ -151,10 +151,10 @@ export default function Projects() {
         <div id={`projects`} className={`${styles.projects} gap-2`}>
             <h2 className={`fw-6 fs-md`}>Projects.</h2>
             <p className={`${styles.description} fw-2 fs-sm`}>
-                Over the course of my time at Notre Dame, I&#39;ve worked on a variety of academic
+                Over the course of my time at Notre Dame, I worked on a variety of academic
                 and personal projects. Projects came in all sizes, were written a variety of languages, and made use of
-                tons of open source libraries. While I think there&#39;s still a lot more to improve
-                and learn, here are a few of the <span className={`fw-5`}>projects I&#39;m most proud </span>
+                various open source libraries. While I think there&#39;s still a lot more to improve
+                and learn, here are a few of the projects I&#39;m most proud
                 of over the last year that you can read about.
             </p>
             <div className={`${styles.projectDisplay} my-3 d-grid gap-3`}>

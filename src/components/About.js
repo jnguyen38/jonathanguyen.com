@@ -14,7 +14,6 @@ import dome from "../../public/media/images/about/dome-hyperlapse.gif";
 import cows from "../../public/media/images/about/cows.webp";
 import outlook from "../../public/media/images/about/outlook.webp";
 import suspension from "../../public/media/images/about/suspension.webp";
-import innovate from "../../public/media/images/about/innovatathon.webp";
 import christmas from "../../public/media/images/about/christmas.webp";
 import toga from "../../public/media/images/about/toga-dance-group.webp";
 import sisters from "../../public/media/images/about/sisters.webp";
@@ -81,7 +80,7 @@ export default function About() {
                 {type: "text", value: "This next picture was from one of our day trips to Bath. The city was absolutely beautiful and I recommend that anyone in the England should go and check it out. This picture was taken along the river, across one of the city's most famous buildings."},
                 {type: "image", value: bath, AR: styles.midAR, dim: styles.projectDim},
                 {type: "subsection", value: "Hyperlapses"},
-                {type: "text", value: "In addition to landscape photography, I recently started experimenting with hyperlapses at school. I think the idea of a hyperlapse is really cool, but the execution was a lot harder than I initially thought. Here was my first attempt at a freehand hyperlapse. Even after some editing, the result is pretty shaky, but I was really psyched with the result, and I didn't think it was bad for my first attempt."},
+                {type: "text", value: "In addition to landscape photography, I recently started experimenting with hyperlapses at school. I think the idea of a hyperlapse is really cool, but the execution was a lot harder than I initially thought. Here was my first attempt at a freehand hyperlapse. Even after some editing, the result is pretty shaky, but I was really happy with the result, and I didn't think it was bad for my first attempt."},
                 {type: "image", value: dome, AR: styles.profileAR, dim: styles.aboutDim},
             ]
         },

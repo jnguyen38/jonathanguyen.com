@@ -12,7 +12,7 @@ export default function Experience() {
 
     function ExperienceItem(props) {
         return (
-            <div className={`${styles.displayItem} black-text d-flex-col-l gap-2 p-3 pr-4`}>
+            <div className={`${styles.displayItem} d-flex-col-l gap-2 p-5 pl-4 my-2`}>
                 <div className={`d-flex jc-sb full-width`}>
                     <div className={`d-flex-col-l`}>
                         <p className={`fw-2`}>{props.company}</p>
