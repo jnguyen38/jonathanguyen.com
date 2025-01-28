@@ -33,7 +33,7 @@ export default function Experience() {
 
     return (
         <div id={`experience`} className={`${styles.experience} gap-2`}>
-            <h2 className={`fw-6 fs-md`}>Experience.</h2>
+            <h2 className={`fw-6 fs-md`}>experience.</h2>
             <p className={`${styles.description} fw-2 fs-sm`}>
                 So far, I&#39;ve been lucky enough to take part in a wide variety of work experiences
                 since my first year at Notre Dame. Although I&#39;m always <span className={`fw-5`}>searching for more opportunities</span>,

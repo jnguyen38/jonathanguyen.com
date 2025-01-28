@@ -11,7 +11,7 @@ import close from "../../public/media/icons/close.png";
 function ModalTitle(props) {
     return (
         <div className={`d-flex jc-sb full-width gap-2 f-wrap`}>
-            <div className={`${homeStyles.listContainer} ${homeStyles.exploreLine} ml-2 pl-3`}>
+            <div className={`${homeStyles.modalTitle} ${homeStyles.exploreLine} ml-2 pl-3`}>
                 <p className={`fw-2`}>{props.data.type}</p>
                 <p className={`fw-5 fs-smd`}>{props.data.name}</p>
             </div>

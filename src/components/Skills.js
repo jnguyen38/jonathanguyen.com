@@ -107,7 +107,7 @@ export default function Skills() {
 
     return (
         <div id={`skills`} className={`${styles.skills} gap-2`}>
-            <h2 className={`fw-6 fs-md`}>Skills.</h2>
+            <h2 className={`fw-6 fs-md`}>skills.</h2>
             <p className={`${styles.description} fw-2 fs-sm`}>
                 Here is my <span className={`fw-5`}>exhaustive set of skills</span> pertaining
                 to software development, including programming languages, libraries,

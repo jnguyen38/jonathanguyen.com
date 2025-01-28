@@ -69,6 +69,10 @@
     width: 80%;
 }
 
+.modalTitle {
+    border-left: 4px solid black;
+}
+
 .exploreLine {
     border-color: #555;
 }

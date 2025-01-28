@@ -153,7 +153,7 @@ export default function About() {
 
     return (
         <div id={`about`} className={`${styles.about} gap-2`}>
-            <h2 className={`fw-6 fs-md`}>About.</h2>
+            <h2 className={`fw-6 fs-md`}>about.</h2>
             <p className={`${styles.description} fw-2 fs-sm`}>
                 Aside from academics, I love doing some things in particular: rock <span className={`fw-5`}>climbing</span>,
                 playing <span className={`fw-5`}>guitar</span>, <span className={`fw-5`}>photography</span>,

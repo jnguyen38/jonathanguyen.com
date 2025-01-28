@@ -149,7 +149,7 @@ export default function Projects() {
 
     return (
         <div id={`projects`} className={`${styles.projects} gap-2`}>
-            <h2 className={`fw-6 fs-md`}>Projects.</h2>
+            <h2 className={`fw-6 fs-md`}>projects.</h2>
             <p className={`${styles.description} fw-2 fs-sm`}>
                 Over the course of my time at Notre Dame, I worked on a variety of academic
                 and personal projects. Projects came in all sizes, were written a variety of languages, and made use of

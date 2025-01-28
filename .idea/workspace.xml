@@ -5,40 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c870200e-edfe-41b7-8028-07f89e32107e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/aws.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/bash.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/cpp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/css.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/docker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/excel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/file-type-verilog.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/firebase.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/git.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/html.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/intellij.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/java.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/js.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/kubernetes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/mysql.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/nextjs-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/nginx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/node.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/python.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/r.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/react.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/icons/skills/spring.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/media/images/Keough Grad Pics-95.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Experience.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Experience.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Projects.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Skills.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/Modal.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Modal.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/pages/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/pages/Home.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/root.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/root.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
