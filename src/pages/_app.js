@@ -8,9 +8,10 @@ import {SettingsModal} from "../components/Modal";
 import Footer from "../components/Footer";
 
 export default function App({ Component, pageProps }) {
-    const [loaded, setLoaded] = useState(false);
-    const [theme, setTheme] = useState(false);
-    const [particles, setParticles] = useState(false);
+    const [loadedTheme, setLoadedTheme] = useState(false);
+    const [loadedParticles, setLoadedParticles] = useState(false);
+    const [theme, setTheme] = useState(undefined);
+    const [particles, setParticles] = useState(undefined);
     const [menu, setMenu] = useState(false);
 
     function scrollTo(element) {
@@ -40,20 +41,39 @@ export default function App({ Component, pageProps }) {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-
-        const localTheme = JSON.parse(window.localStorage.getItem("theme"));
-        setTheme(localTheme);
-        setLoaded(true);
     }, [])
 
     useEffect(() => {
-        window.localStorage.setItem("theme", JSON.stringify(theme));
+        const localTheme = JSON.parse(window.localStorage.getItem("theme"));
+        if (theme === undefined && !localTheme) {
+            window.localStorage.setItem("theme", JSON.stringify(false));
+            setTheme(false)
+        } else if (theme === undefined) {
+            setTheme(localTheme)
+        } else {
+            window.localStorage.setItem("theme", JSON.stringify(theme));
+        }
+        setLoadedTheme(true)
     }, [theme])
+
+    useEffect(() => {
+        console.log(particles)
+        const localParticles = JSON.parse(window.localStorage.getItem("particles"));
+        if (particles === undefined && !localParticles) {
+            window.localStorage.setItem("particles", JSON.stringify(false));
+            setParticles(false)
+        } else if (particles === undefined) {
+            setParticles(localParticles)
+        } else {
+            window.localStorage.setItem("particles", JSON.stringify(particles));
+        }
+        setLoadedParticles(true)
+    }, [particles])
 
     function toggleTheme() {setTheme(curr => !curr)}
     function toggleParticles() {setParticles(curr => !curr)}
 
-    return loaded  && (
+    return loadedParticles  && loadedTheme &&  (
         <div className={theme ? "theme light-mode d-flex-row-c" : "theme dark-mode d-flex-row-c"}>
             <Head>
                 <title>Jonathan Nguyen | Notre Dame | Computer Science</title>
@@ -74,12 +94,22 @@ export default function App({ Component, pageProps }) {
                     particles={particles}
                     toggleParticles={toggleParticles}/>
 
-            <Component theme={theme} toggleTheme={toggleTheme} particles={particles} toggleParticles={toggleParticles} {...pageProps}/>
+            <Component theme={theme}
+                       toggleTheme={toggleTheme}
+                       particles={particles}
+                       toggleParticles={toggleParticles}
+                       {...pageProps}/>
             <Analytics/>
-            {particles && <CustomParticles particles={particles}/>}
+            {particles && <CustomParticles particles={!particles}/>}
             <div className={"defaultBG"}/>
 
-            <SettingsModal close={close} show={menu} scrollTo={scrollTo} theme={theme}/>
+            <SettingsModal theme={theme}
+                           toggleTheme={toggleTheme}
+                           particles={particles}
+                           toggleParticles={toggleParticles}
+                           close={close}
+                           show={menu}
+                           scrollTo={scrollTo}/>
         </div>
     )
 }

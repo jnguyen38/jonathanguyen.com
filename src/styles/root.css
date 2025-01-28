@@ -62,6 +62,7 @@ tab {
 }
 
 .dark-mode {
+  --profile-border: white;
   --inverted-bg-solid: rgba(255, 255, 255, .4);
   --inverted-bg-transparent: rgba(242, 239, 233, .4);
   --inverted-bg-transparent-dark: rgba(242, 239, 233, .7);
@@ -77,6 +78,7 @@ tab {
 }
 
 .light-mode {
+  --profile-border: black;
   --inverted-bg-solid: rgba(0, 0, 0, .3);
   --inverted-bg-transparent: rgba(28, 93, 153, .4);
   --inverted-bg-transparent-dark: rgba(28, 93, 153, .8);

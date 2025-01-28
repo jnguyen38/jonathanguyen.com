@@ -12,8 +12,8 @@ import Footer from "../components/Footer";
 function Intro(props) {
     return (
         <div id={`intro`} className={`${styles.intro} d-flex-row-c jc-sb f-wrap`}>
-            <div className={`${styles.introInfo} d-flex-col-c`}>
-                <h1 className={`fw-2 fs-xl mt-5 text-center`}>Hi, I&#39;m <span className={`fw-6`}>Jonathan Nguyen</span></h1>
+            <div className={`${styles.introInfo} d-flex-col-c p-20`}>
+                <h1 className={`fw-2 fs-xl text-center`}>Hi, I&#39;m <span className={`fw-6`}>Jonathan Nguyen</span></h1>
                 <p className={`fw-2 fs-sm mt-20 mb-20 text-center`}>
                     I&#39;m an Application Security Engineer at Palantir. I graduated from the the University of Notre Dame
                     with a B.S. in Computer Science in 2024. During my undergrad, I developed several
