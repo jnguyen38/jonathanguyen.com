@@ -18,7 +18,7 @@ export default function Projects() {
             github: "https://github.com/jnguyen38/studybuddy",
             website: "https://studybuddynd.com",
             file: "/files/studybuddy-report.pdf",
-            tags: ["ReactJS", "AWS Lightsail", "MySQL", "CRA", "WebDev", "ExpressJS", "Node", "Nginx", "SSL", "Git"],
+            tags: ["ReactJS", "AWS Lightsail", "MySQL", "CRA", "WebDev", "ExpressJS", "Node", "Nginx", "SSL/TLS", "OAuth2", "Git"],
             content: [
                 {type: "section", value: "Description"},
                 {type: "text", value: "This is StudyBuddy. This is by far my most extensive and complicated project that I've worked on in regard to Web Development. StudyBuddy is an all-in-one web application for helping students at Notre Dame study. Think of it like a Yelp! for study spots on campus. It has a database of hundreds of spaces to study, with a variety of study space attributes like loudness, natural lighting, outlet availability, etc. You can search for study spaces based on any of these attributes, and if logged in, you can even get study space recommendations based on your location or your like/review history."},
@@ -45,7 +45,7 @@ export default function Projects() {
             id: 2, type: "Web Development", name: "This Website (Recursive! Wow!)", src: thisWeb,
             github: "https://github.com/jnguyen38/jonathanguyen.com",
             website: "https://jonathanguyen.com",
-            tags: ["ReactJS", "NextJS", "WebDev", "Node", "TSParticles", "Git"],
+            tags: ["ReactJS", "NextJS", "WebDev", "Node", "Git"],
             content: [
                 {type: "section", value: "Description"},
                 {type: "text", value: "Everyone who works with me on projects at college knows that I love frontend development, so this website was a lot of fun for me to work on. Everything on this site is custom coded (aside from the 'react-tsparticles' package for the background) in CSS and JSX using the Next.js framework. This project was my first time working with Next, and compared to the production deployment of CRA, the server-side rendering speed is ridiculously faster when loading images and JS effects."},

@@ -17,7 +17,7 @@ function Intro(props) {
                 <p className={`fw-2 fs-sm mt-20 mb-20 text-center`}>
                     I&#39;m an Application Security Engineer at Palantir. I graduated from the the University of Notre Dame
                     with a B.S. in Computer Science in 2024. During my undergrad, I developed several
-                    web app solutions during my time at Notre Dame and fostered a particular
+                    web app solutions and fostered a particular
                     interest in <span className={"fw-5"}>cryptography and information security</span>.
                 </p>
                 <p className={`fw-2 fs-sm mb-20 text-center`}>
